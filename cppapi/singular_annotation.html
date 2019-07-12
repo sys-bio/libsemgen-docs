@@ -1,0 +1,321 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>SingularAnnotation &mdash; SemSim 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Component" href="component.html" />
+    <link rel="prev" title="CompositeAnnotation" href="composite_annotation.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SemSim
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="uri.html">URI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relation.html">Relation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="biomodels_qualifiers.html">Biomodels Qualifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource.html">Resource</a></li>
+<li class="toctree-l2"><a class="reference internal" href="entity.html">Entity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="entity_descriptor.html">EntityDescriptor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="descriptor_term.html">DescriptorTerm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physical_property.html">PhysicalProperty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="composite_annotation.html">CompositeAnnotation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">SingularAnnotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="component.html">Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model.html">Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ontologies.html">Ontologies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sbml.html">SBML Import / Export</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SemSim</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">C++ API</a> &raquo;</li>
+        
+      <li>SingularAnnotation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/cppapi/singular_annotation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="singularannotation">
+<span id="singular-annotation"></span><h1>SingularAnnotation<a class="headerlink" href="#singularannotation" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="_CPPv4N6semsim18SingularAnnotationE">
+<span id="_CPPv3N6semsim18SingularAnnotationE"></span><span id="_CPPv2N6semsim18SingularAnnotationE"></span><span id="semsim::SingularAnnotation"></span><span class="target" id="classsemsim_1_1SingularAnnotation"></span><em class="property">class </em><code class="sig-name descname">SingularAnnotation</code> : <em class="property">public</em> semsim::AnnotationBase, <em class="property">public</em> semsim::EntityBase<a class="headerlink" href="#_CPPv4N6semsim18SingularAnnotationE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The singular / “plain” annotation class is designed to represent traditional MIRIAM annotations found in SBML models. These types of annotations are not as expressive as <a class="reference internal" href="composite_annotation.html#classsemsim_1_1CompositeAnnotation"><span class="std std-ref">CompositeAnnotations</span></a> and can only point to one or more <a class="reference internal" href="resource.html#classsemsim_1_1Resource"><span class="std std-ref">Resources</span></a> which define the entity. Overusing definition URIs is generally bad practice and, ideally, one should use a single definition <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a> that best captures the model element. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6semsim18SingularAnnotation18SingularAnnotationERKNSt6stringERK8Resource">
+<span id="_CPPv3N6semsim18SingularAnnotation18SingularAnnotationERKNSt6stringERK8Resource"></span><span id="_CPPv2N6semsim18SingularAnnotation18SingularAnnotationERKNSt6stringERK8Resource"></span><span id="semsim::SingularAnnotation::SingularAnnotation__ssCR.ResourceCR"></span><span class="target" id="classsemsim_1_1SingularAnnotation_1a45387e7b6260c9044f09fc03a14782f1"></span><code class="sig-name descname">SingularAnnotation</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>metaid</em>, <em class="property">const</em> <a class="reference internal" href="resource.html#_CPPv4N6semsim8ResourceE" title="semsim::Resource">Resource</a> &amp;<em>definition</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6semsim18SingularAnnotation18SingularAnnotationERKNSt6stringERK8Resource" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a <a class="reference internal" href="#classsemsim_1_1SingularAnnotation"><span class="std std-ref">SingularAnnotation</span></a> given a definition URL. For example, to create an annotation describing pyruvate:</p>
+<p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp"># include &quot;semsim/SemSim.h&quot;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">semsim</span><span class="p">;</span>
+<span class="c1">// will automatically get assigned a &quot;bqb:is&quot; relation</span>
+<span class="c1">// pointing to CHEBI:15361</span>
+<span class="n">SingularAnnotation</span> <span class="nf">a</span><span class="p">(</span><span class="s">&quot;metaid&quot;</span><span class="p">,</span> <span class="n">CHEBI</span><span class="o">::</span><span class="n">get</span><span class="p">(</span><span class="mi">15361</span><span class="p">));</span>
+</pre></div>
+</div>
+</p>
+<p>Generally, a model element should be defined using only a single <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a>. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6semsim18SingularAnnotation18SingularAnnotationERKNSt6stringE">
+<span id="_CPPv3N6semsim18SingularAnnotation18SingularAnnotationERKNSt6stringE"></span><span id="_CPPv2N6semsim18SingularAnnotation18SingularAnnotationERKNSt6stringE"></span><span id="semsim::SingularAnnotation::SingularAnnotation__ssCR"></span><span class="target" id="classsemsim_1_1SingularAnnotation_1a536d5df007d28181d94ebce88094282d"></span><code class="sig-name descname">SingularAnnotation</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>metaid</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6semsim18SingularAnnotation18SingularAnnotationERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructor specifying only the meta id (defintions to be added later by user) </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6semsim18SingularAnnotation18SingularAnnotationERK18SingularAnnotation">
+<span id="_CPPv3N6semsim18SingularAnnotation18SingularAnnotationERK18SingularAnnotation"></span><span id="_CPPv2N6semsim18SingularAnnotation18SingularAnnotationERK18SingularAnnotation"></span><span id="semsim::SingularAnnotation::SingularAnnotation__SingularAnnotationCR"></span><span class="target" id="classsemsim_1_1SingularAnnotation_1a7825e93dd24f8308fdf1d0364907c1a4"></span><code class="sig-name descname">SingularAnnotation</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6semsim18SingularAnnotation18SingularAnnotationERKNSt6stringERK8Resource" title="semsim::SingularAnnotation::SingularAnnotation">SingularAnnotation</a> &amp;<em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6semsim18SingularAnnotation18SingularAnnotationERK18SingularAnnotation" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6semsim18SingularAnnotation9getMetaIdEv">
+<span id="_CPPv3NK6semsim18SingularAnnotation9getMetaIdEv"></span><span id="_CPPv2NK6semsim18SingularAnnotation9getMetaIdEv"></span><span id="semsim::SingularAnnotation::getMetaIdC"></span><span class="target" id="classsemsim_1_1SingularAnnotation_1ae62892c95df457bc0e8a3484a56dc382"></span><em class="property">const</em> std::string &amp;<code class="sig-name descname">getMetaId</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6semsim18SingularAnnotation9getMetaIdEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the meta id for this element. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6semsim18SingularAnnotation5cloneEv">
+<span id="_CPPv3NK6semsim18SingularAnnotation5cloneEv"></span><span id="_CPPv2NK6semsim18SingularAnnotation5cloneEv"></span><span id="semsim::SingularAnnotation::cloneC"></span><span class="target" id="classsemsim_1_1SingularAnnotation_1abb9abb7cd886514f4b3ad7d5c1d469eb"></span><em class="property">virtual</em> AnnotationBase *<code class="sig-name descname">clone</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6semsim18SingularAnnotation5cloneEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create a copy of this object using the correct derived class’s type. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6semsim18SingularAnnotation14serializeToRDFERK3URIP12raptor_worldP17raptor_serializer">
+<span id="_CPPv3NK6semsim18SingularAnnotation14serializeToRDFERK3URIP12raptor_worldP17raptor_serializer"></span><span id="_CPPv2NK6semsim18SingularAnnotation14serializeToRDFERK3URIP12raptor_worldP17raptor_serializer"></span><span id="semsim::SingularAnnotation::serializeToRDF__URICR.raptor_worldP.raptor_serializerPC"></span><span class="target" id="classsemsim_1_1SingularAnnotation_1a4beecafeb2a26989f89c73e1bf3e3b1f"></span>void <code class="sig-name descname">serializeToRDF</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="relation.html#_CPPv4N6semsim3URIE" title="semsim::URI">URI</a> &amp;<em>sbml_base_uri</em>, raptor_world *<em>world</em>, raptor_serializer *<em>serializer</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6semsim18SingularAnnotation14serializeToRDFERK3URIP12raptor_worldP17raptor_serializer" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Serialize this annotation to RDF using the Raptor library. This function just delegates to the EntityBase serialization logic. The RDF serialization format is chosen when initializing the <code class="docutils literal notranslate"><span class="pre">raptor_serializer</span></code>, and must be done before calling this function. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a> for this entity. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sbml_base_uri</span></code>: The base <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a> of the SBML document relative to this (e.g. a relative path in a COMBINE archive). </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">world</span></code>: Raptor world object. Must be initialized prior to calling this function. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serializer</span></code>: Raptor serializer object. Must be initialized prior to calling this function. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6semsim18SingularAnnotation13makeCompositeERK16PhysicalProperty">
+<span id="_CPPv3NK6semsim18SingularAnnotation13makeCompositeERK16PhysicalProperty"></span><span id="_CPPv2NK6semsim18SingularAnnotation13makeCompositeERK16PhysicalProperty"></span><span id="semsim::SingularAnnotation::makeComposite__PhysicalPropertyCRC"></span><span class="target" id="classsemsim_1_1SingularAnnotation_1a486174452576644b752820dbaa92a1ac"></span>AnnotationPtr <code class="sig-name descname">makeComposite</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="physical_property.html#_CPPv4N6semsim16PhysicalPropertyE" title="semsim::PhysicalProperty">PhysicalProperty</a> &amp;<em>prop</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6semsim18SingularAnnotation13makeCompositeERK16PhysicalProperty" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Convert singular annotations to composite annotations by copying their definitions and terms. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>A new composite annotation </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">prop</span></code>: The physical property to assign to the composite annotation. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6semsim18SingularAnnotation6getURIERK3URI">
+<span id="_CPPv3NK6semsim18SingularAnnotation6getURIERK3URI"></span><span id="_CPPv2NK6semsim18SingularAnnotation6getURIERK3URI"></span><span id="semsim::SingularAnnotation::getURI__URICRC"></span><span class="target" id="classsemsim_1_1SingularAnnotation_1af09eed6f4e673edca0d6e6ec6226f66c"></span><a class="reference internal" href="relation.html#_CPPv4N6semsim3URIE" title="semsim::URI">URI</a> <code class="sig-name descname">getURI</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="relation.html#_CPPv4N6semsim3URIE" title="semsim::URI">URI</a> &amp;<em>base</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6semsim18SingularAnnotation6getURIERK3URI" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the local <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a> of this entity. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="component.html" class="btn btn-neutral float-right" title="Component" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="composite_annotation.html" class="btn btn-neutral" title="CompositeAnnotation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, J Kyle Medley, Prakhar Agarwal.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

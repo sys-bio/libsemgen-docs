@@ -1,0 +1,278 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>PhysicalProperty &mdash; SemSim 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="CompositeAnnotation" href="composite_annotation.html" />
+    <link rel="prev" title="DescriptorTerm" href="descriptor_term.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SemSim
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="uri.html">URI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relation.html">Relation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="biomodels_qualifiers.html">Biomodels Qualifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource.html">Resource</a></li>
+<li class="toctree-l2"><a class="reference internal" href="entity.html">Entity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="entity_descriptor.html">EntityDescriptor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="descriptor_term.html">DescriptorTerm</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">PhysicalProperty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="composite_annotation.html">CompositeAnnotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="singular_annotation.html">SingularAnnotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="component.html">Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model.html">Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ontologies.html">Ontologies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sbml.html">SBML Import / Export</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SemSim</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">C++ API</a> &raquo;</li>
+        
+      <li>PhysicalProperty</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/cppapi/physical_property.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="physicalproperty">
+<span id="physical-property"></span><h1>PhysicalProperty<a class="headerlink" href="#physicalproperty" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="_CPPv4N6semsim16PhysicalPropertyE">
+<span id="_CPPv3N6semsim16PhysicalPropertyE"></span><span id="_CPPv2N6semsim16PhysicalPropertyE"></span><span id="semsim::PhysicalProperty"></span><span class="target" id="classsemsim_1_1PhysicalProperty"></span><em class="property">class </em><code class="sig-name descname">PhysicalProperty</code><a class="headerlink" href="#_CPPv4N6semsim16PhysicalPropertyE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A physical property describes what type of quantity (volume, concentration, Moles, pressure, etc.) a variable in a model represents. Physical properties always point to a single term in the <a class="reference external" href="http://bioportal.bioontology.org/ontologies/OPB">Ontology of Physics for Biology</a>, which can be accessed using the <a class="reference internal" href="opb.html#classsemsim_1_1OPB"><span class="std std-ref">OPB</span></a> class. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6semsim16PhysicalProperty16PhysicalPropertyERK8Resource">
+<span id="_CPPv3N6semsim16PhysicalProperty16PhysicalPropertyERK8Resource"></span><span id="_CPPv2N6semsim16PhysicalProperty16PhysicalPropertyERK8Resource"></span><span id="semsim::PhysicalProperty::PhysicalProperty__ResourceCR"></span><span class="target" id="classsemsim_1_1PhysicalProperty_1aece409bfd6c9f16e57b7a801da3659ea"></span><code class="sig-name descname">PhysicalProperty</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="resource.html#_CPPv4N6semsim8ResourceE" title="semsim::Resource">Resource</a> &amp;<em>resource</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6semsim16PhysicalProperty16PhysicalPropertyERK8Resource" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct from a resource. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6semsim16PhysicalProperty16PhysicalPropertyERKNSt6stringE">
+<span id="_CPPv3N6semsim16PhysicalProperty16PhysicalPropertyERKNSt6stringE"></span><span id="_CPPv2N6semsim16PhysicalProperty16PhysicalPropertyERKNSt6stringE"></span><span id="semsim::PhysicalProperty::PhysicalProperty__ssCR"></span><span class="target" id="classsemsim_1_1PhysicalProperty_1a0ee71cba996098f3db5284451ad16879"></span><code class="sig-name descname">PhysicalProperty</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>resource</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6semsim16PhysicalProperty16PhysicalPropertyERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct directly from a string that contains the resource <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a>. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6semsim16PhysicalProperty11getResourceEv">
+<span id="_CPPv3NK6semsim16PhysicalProperty11getResourceEv"></span><span id="_CPPv2NK6semsim16PhysicalProperty11getResourceEv"></span><span id="semsim::PhysicalProperty::getResourceC"></span><span class="target" id="classsemsim_1_1PhysicalProperty_1a697f9e44e0e6fa318543d994bf0732f2"></span><em class="property">const</em> <a class="reference internal" href="resource.html#_CPPv4N6semsim8ResourceE" title="semsim::Resource">Resource</a> &amp;<code class="sig-name descname">getResource</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6semsim16PhysicalProperty11getResourceEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The <a class="reference internal" href="resource.html#classsemsim_1_1Resource"><span class="std std-ref">Resource</span></a> for this <a class="reference internal" href="#classsemsim_1_1PhysicalProperty"><span class="std std-ref">PhysicalProperty</span></a>. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6semsim16PhysicalProperty11getResourceEv">
+<span id="_CPPv3N6semsim16PhysicalProperty11getResourceEv"></span><span id="_CPPv2N6semsim16PhysicalProperty11getResourceEv"></span><span id="semsim::PhysicalProperty::getResource"></span><span class="target" id="classsemsim_1_1PhysicalProperty_1ab94cfd034f81cfadecb81db5e2bb83d4"></span><a class="reference internal" href="resource.html#_CPPv4N6semsim8ResourceE" title="semsim::Resource">Resource</a> &amp;<code class="sig-name descname">getResource</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6semsim16PhysicalProperty11getResourceEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The <a class="reference internal" href="resource.html#classsemsim_1_1Resource"><span class="std std-ref">Resource</span></a> for this <a class="reference internal" href="#classsemsim_1_1PhysicalProperty"><span class="std std-ref">PhysicalProperty</span></a>. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="composite_annotation.html" class="btn btn-neutral float-right" title="CompositeAnnotation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="descriptor_term.html" class="btn btn-neutral" title="DescriptorTerm" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, J Kyle Medley, Prakhar Agarwal.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

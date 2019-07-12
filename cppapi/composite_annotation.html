@@ -1,0 +1,405 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CompositeAnnotation &mdash; SemSim 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="SingularAnnotation" href="singular_annotation.html" />
+    <link rel="prev" title="PhysicalProperty" href="physical_property.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SemSim
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="uri.html">URI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relation.html">Relation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="biomodels_qualifiers.html">Biomodels Qualifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource.html">Resource</a></li>
+<li class="toctree-l2"><a class="reference internal" href="entity.html">Entity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="entity_descriptor.html">EntityDescriptor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="descriptor_term.html">DescriptorTerm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physical_property.html">PhysicalProperty</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">CompositeAnnotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="singular_annotation.html">SingularAnnotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="component.html">Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model.html">Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ontologies.html">Ontologies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sbml.html">SBML Import / Export</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SemSim</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">C++ API</a> &raquo;</li>
+        
+      <li>CompositeAnnotation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/cppapi/composite_annotation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="compositeannotation">
+<span id="composite-annotation"></span><h1>CompositeAnnotation<a class="headerlink" href="#compositeannotation" title="Permalink to this headline">¶</a></h1>
+<p>A <a class="reference internal" href="#compositeannotation"><span class="std std-ref">CompositeAnnotation</span></a> contains two elements:
+a <a class="reference internal" href="physical_property.html#physicalproperty"><span class="std std-ref">PhysicalProperty</span></a> and an <a class="reference internal" href="entity.html#entity"><span class="std std-ref">Entity</span></a>.
+The <a class="reference internal" href="physical_property.html#physicalproperty"><span class="std std-ref">PhysicalProperty</span></a> describes the type of quantity being modeled, e.g.
+molecule concentration (Molar), amount (moles or grams), fluid volume (L), pressure (Pa), etc.
+A composite annotation always contains <strong>exactly one</strong> physical property.
+When the model is exported to RDF, the physical property will be encoded using an isPropertyOf
+relation (see <a class="reference internal" href="biomodels_qualifiers.html#biomodels-qualifiers"><span class="std std-ref">bqb::isPropertyOf</span></a>).
+The following diagram shows a composite annotation and its two most important elements -
+the physical property and entity.</p>
+<p class="noindent" style="text-align: center"><object data="../graphics/composite-annotation1-1.svg" width="423.69516 " height="154.82889 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object><p>The <a class="reference internal" href="entity.html#entity"><span class="std std-ref">Entity</span></a> describes <em>what</em> the model element
+is and (optionally) <em>where</em> it is in the physical world.
+An entity contains a <em>definition URI</em> which describes what it is
+(e.g. a <a class="reference external" href="https://www.ebi.ac.uk/chebi/">ChEBI</a> identifier for reaction network models or an <a class="reference external" href="https://bioportal.bioontology.org/ontologies/FMA">FMA</a> identifier for physiological models),
+and an optional linear chain of <em>descriptor terms</em> which provide further information
+that describes <em>where</em> the element is in the physical world.
+See the documentation of the <a class="reference internal" href="entity_descriptor.html#entitydescriptor"><span class="std std-ref">EntityDescriptor</span></a> class for an example.
+Expanding the <a class="reference internal" href="entity.html#entity"><span class="std std-ref">Entity</span></a> part of a composite annotation yields the following diagram:</p>
+<p class="noindent" style="text-align: center"><object data="../graphics/composite-annotation2-1.svg" width="513.79356 " height="451.47919 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object><dl class="class">
+<dt id="_CPPv4N6semsim19CompositeAnnotationE">
+<span id="_CPPv3N6semsim19CompositeAnnotationE"></span><span id="_CPPv2N6semsim19CompositeAnnotationE"></span><span id="semsim::CompositeAnnotation"></span><span class="target" id="classsemsim_1_1CompositeAnnotation"></span><em class="property">class </em><code class="sig-name descname">CompositeAnnotation</code> : <em class="property">public</em> semsim::AnnotationBase<a class="headerlink" href="#_CPPv4N6semsim19CompositeAnnotationE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Composite annotations allow more precise descriptions of model elements than singular (“plain”) Annotations. Whereas singular annotations specify the <em>chemical identity</em> of an SBML species or the <em>physiological identity</em> of a CellML variable, composite annotations also provide two additional pieces of information: the <a class="reference internal" href="physical_property.html#classsemsim_1_1PhysicalProperty"><span class="std std-ref">PhysicalProperty</span></a> of an element, which specifies the physical quantity the element represents (e.g. <em>concentration</em> or <em>amount</em> of an SBML species; <em>liquid volume</em> or <em>electric current</em> of a CellML variable), and a linear chain of terms (the <a class="reference internal" href="entity_descriptor.html#classsemsim_1_1EntityDescriptor"><span class="std std-ref">EntityDescriptor</span></a>) that describes <em>what</em> the element is (e.g. the chemical identity of an SBML species) and <em>where</em> it is in the physical world.</p>
+<p>For example, to describe an SBML species representing the <em>cytosolic glucose concentration in a pancreatic beta cell</em>, one would need to specify that the species represents glucose (<a class="reference external" href="https://identifiers.org/CHEBI:17234">CHEBI:17234</a>) inside the cytosolic compartment (<a class="reference external" href="https://identifiers.org/GO:0005829">GO:0005829</a>) of a pancreatic beta cell (<a class="reference external" href="https://identifiers.org/CL:0000169">CL:0000169</a>). The following code snippet illustrates how to construct a <a class="reference internal" href="#classsemsim_1_1CompositeAnnotation"><span class="std std-ref">CompositeAnnotation</span></a> for this example:</p>
+<p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// this example assumes you are using C++11 mode</span>
+<span class="c1">// (controlled by the SEMSIM_CXX_STANDARD CMake variable)</span>
+</pre></div>
+</div>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6semsim19CompositeAnnotation19CompositeAnnotationERKNSt6stringERK16PhysicalPropertyRK6Entity">
+<span id="_CPPv3N6semsim19CompositeAnnotation19CompositeAnnotationERKNSt6stringERK16PhysicalPropertyRK6Entity"></span><span id="_CPPv2N6semsim19CompositeAnnotation19CompositeAnnotationERKNSt6stringERK16PhysicalPropertyRK6Entity"></span><span id="semsim::CompositeAnnotation::CompositeAnnotation__ssCR.PhysicalPropertyCR.EntityCR"></span><span class="target" id="classsemsim_1_1CompositeAnnotation_1ad3833d310e3b8cb343ef464d80636795"></span><code class="sig-name descname">CompositeAnnotation</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>metaid</em>, <em class="property">const</em> <a class="reference internal" href="physical_property.html#_CPPv4N6semsim16PhysicalPropertyE" title="semsim::PhysicalProperty">PhysicalProperty</a> &amp;<em>property</em>, <em class="property">const</em> <a class="reference internal" href="entity.html#_CPPv4N6semsim6EntityE" title="semsim::Entity">Entity</a> &amp;<em>entity</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6semsim19CompositeAnnotation19CompositeAnnotationERKNSt6stringERK16PhysicalPropertyRK6Entity" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a <a class="reference internal" href="#classsemsim_1_1CompositeAnnotation"><span class="std std-ref">CompositeAnnotation</span></a> given a physical property (what is the quantity being represented - chemical concentration, fluid volume, etc.?) and a domain descriptor (“what” is the chemical identity and “where” does the entity reside in physical space?) <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">property</span></code>: The physical property of this composite annotation. Always provided. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">entity</span></code>: The entity contains all information outside of the physical property. This tells you “what” the element is (e.g. by specifying chemical identity) and “where”. For example, if the annotation describes “cytosolic glucose concentration in a pancreatic beta cell”, the entity would contain a definition (glycose) and two <em>structural relations</em> specifying the entity is <em>occurs in</em> the cytosol, which in turn <em>is part of</em> a pancreatic beta cell. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6semsim19CompositeAnnotation19CompositeAnnotationERK19CompositeAnnotation">
+<span id="_CPPv3N6semsim19CompositeAnnotation19CompositeAnnotationERK19CompositeAnnotation"></span><span id="_CPPv2N6semsim19CompositeAnnotation19CompositeAnnotationERK19CompositeAnnotation"></span><span id="semsim::CompositeAnnotation::CompositeAnnotation__CompositeAnnotationCR"></span><span class="target" id="classsemsim_1_1CompositeAnnotation_1adb52af8385e3f989fa0f25bdb5403663"></span><code class="sig-name descname">CompositeAnnotation</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N6semsim19CompositeAnnotation19CompositeAnnotationERKNSt6stringERK16PhysicalPropertyRK6Entity" title="semsim::CompositeAnnotation::CompositeAnnotation">CompositeAnnotation</a> &amp;<em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6semsim19CompositeAnnotation19CompositeAnnotationERK19CompositeAnnotation" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy constructor. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6semsim19CompositeAnnotation19CompositeAnnotationERK18SingularAnnotationRK16PhysicalProperty">
+<span id="_CPPv3N6semsim19CompositeAnnotation19CompositeAnnotationERK18SingularAnnotationRK16PhysicalProperty"></span><span id="_CPPv2N6semsim19CompositeAnnotation19CompositeAnnotationERK18SingularAnnotationRK16PhysicalProperty"></span><span id="semsim::CompositeAnnotation::CompositeAnnotation__SingularAnnotationCR.PhysicalPropertyCR"></span><span class="target" id="classsemsim_1_1CompositeAnnotation_1a7b122b2cfe5b8829926bc64962970dc3"></span><code class="sig-name descname">CompositeAnnotation</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="singular_annotation.html#_CPPv4N6semsim18SingularAnnotationE" title="semsim::SingularAnnotation">SingularAnnotation</a> &amp;<em>other</em>, <em class="property">const</em> <a class="reference internal" href="physical_property.html#_CPPv4N6semsim16PhysicalPropertyE" title="semsim::PhysicalProperty">PhysicalProperty</a> &amp;<em>property</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6semsim19CompositeAnnotation19CompositeAnnotationERK18SingularAnnotationRK16PhysicalProperty" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct from a singular annotation. Copy all definitions and terms. <dl>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist">
+<li><p><code class="docutils literal notranslate"><span class="pre">other</span></code>: The singular annotation to copy. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">property</span></code>: The physical property to assign to the composite annotation. </p></li>
+<li><code class="docutils literal notranslate"></code></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6semsim19CompositeAnnotation13isEntityEmptyEv">
+<span id="_CPPv3NK6semsim19CompositeAnnotation13isEntityEmptyEv"></span><span id="_CPPv2NK6semsim19CompositeAnnotation13isEntityEmptyEv"></span><span id="semsim::CompositeAnnotation::isEntityEmptyC"></span><span class="target" id="classsemsim_1_1CompositeAnnotation_1af9e4284b3b01e16965f9d9bb1448a4eb"></span>bool <code class="sig-name descname">isEntityEmpty</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6semsim19CompositeAnnotation13isEntityEmptyEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>This function returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the physical entity descriptor is empty. This should not be the case for any useful annotation. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Whether the physical entity descriptor is empty. </p>
+</dd>
+<dt><strong>Return</strong></dt><dd><p>The <a class="reference internal" href="entity_descriptor.html#classsemsim_1_1EntityDescriptor"><span class="std std-ref">EntityDescriptor</span></a> describing the physical entity of this annotation. This function returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the <a class="reference internal" href="entity.html#classsemsim_1_1Entity"><span class="std std-ref">Entity</span></a> element of this composite annotation is empty. The entity describes “what” the model element is and “where” the it is located. IGNORE: It is typically empty for annotations read in from SBML models, since SBML has no way of expressing the “where” part of a composite annotation. However, if the SBML entity is a <strong>species</strong> that resides in a <strong>compartment</strong>, SemSim may automatically insert a domain descriptor encoding the species/compartment relationship ( and this function will return false). </p>
+</dd>
+<dt><strong>Return</strong></dt><dd><p>Whether the physical domain descriptor is empty. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6semsim19CompositeAnnotation9getEntityEv">
+<span id="_CPPv3NK6semsim19CompositeAnnotation9getEntityEv"></span><span id="_CPPv2NK6semsim19CompositeAnnotation9getEntityEv"></span><span id="semsim::CompositeAnnotation::getEntityC"></span><span class="target" id="classsemsim_1_1CompositeAnnotation_1ad49acb1d0ffdce50dc738d2ad6e007f9"></span><em class="property">const</em> <a class="reference internal" href="entity.html#_CPPv4N6semsim6EntityE" title="semsim::Entity">Entity</a> &amp;<code class="sig-name descname">getEntity</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6semsim19CompositeAnnotation9getEntityEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The <a class="reference internal" href="entity_descriptor.html#classsemsim_1_1EntityDescriptor"><span class="std std-ref">EntityDescriptor</span></a> describing the physical entity of this annotation. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6semsim19CompositeAnnotation9getEntityEv">
+<span id="_CPPv3N6semsim19CompositeAnnotation9getEntityEv"></span><span id="_CPPv2N6semsim19CompositeAnnotation9getEntityEv"></span><span id="semsim::CompositeAnnotation::getEntity"></span><span class="target" id="classsemsim_1_1CompositeAnnotation_1ad3a98ca691608c76c3ebeb398dec4d21"></span><a class="reference internal" href="entity.html#_CPPv4N6semsim6EntityE" title="semsim::Entity">Entity</a> &amp;<code class="sig-name descname">getEntity</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6semsim19CompositeAnnotation9getEntityEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The <a class="reference internal" href="entity_descriptor.html#classsemsim_1_1EntityDescriptor"><span class="std std-ref">EntityDescriptor</span></a> describing the physical entity of this annotation. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6semsim19CompositeAnnotation7addTermERK8RelationRK8Resource">
+<span id="_CPPv3N6semsim19CompositeAnnotation7addTermERK8RelationRK8Resource"></span><span id="_CPPv2N6semsim19CompositeAnnotation7addTermERK8RelationRK8Resource"></span><span id="semsim::CompositeAnnotation::addTerm__RelationCR.ResourceCR"></span><span class="target" id="classsemsim_1_1CompositeAnnotation_1a58187ca790f61e83042442b04b0fc066"></span>void <code class="sig-name descname">addTerm</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="uri.html#_CPPv4N6semsim8RelationE" title="semsim::Relation">Relation</a> &amp;<em>relation</em>, <em class="property">const</em> <a class="reference internal" href="resource.html#_CPPv4N6semsim8ResourceE" title="semsim::Resource">Resource</a> &amp;<em>resource</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6semsim19CompositeAnnotation7addTermERK8RelationRK8Resource" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Shortcut for adding a descriptor term to the last entity descriptor (often, there is just one entity descriptor). Create a new <a class="reference internal" href="entity_descriptor.html#classsemsim_1_1EntityDescriptor"><span class="std std-ref">EntityDescriptor</span></a> if none exist. <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">relation</span></code>: The relation that the new term should use. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource</span></code>: The resource that the term should point to. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6semsim19CompositeAnnotation5cloneEv">
+<span id="_CPPv3NK6semsim19CompositeAnnotation5cloneEv"></span><span id="_CPPv2NK6semsim19CompositeAnnotation5cloneEv"></span><span id="semsim::CompositeAnnotation::cloneC"></span><span class="target" id="classsemsim_1_1CompositeAnnotation_1abd968773d221ee723b32672b4c47a682"></span><em class="property">virtual</em> AnnotationBase *<code class="sig-name descname">clone</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6semsim19CompositeAnnotation5cloneEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create a copy of this object using the correct derived class’s type. </p>
+<p>This function returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if this annotation can be encoded in an SBML model (i.e. its domain descriptor must be empty). The only exception to this is when the domain descriptor consists of a single term, and that term describes the <em>compartment</em> that the entity resides in. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>[description] </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6semsim19CompositeAnnotation14serializeToRDFERK3URIP12raptor_worldP17raptor_serializer">
+<span id="_CPPv3NK6semsim19CompositeAnnotation14serializeToRDFERK3URIP12raptor_worldP17raptor_serializer"></span><span id="_CPPv2NK6semsim19CompositeAnnotation14serializeToRDFERK3URIP12raptor_worldP17raptor_serializer"></span><span id="semsim::CompositeAnnotation::serializeToRDF__URICR.raptor_worldP.raptor_serializerPC"></span><span class="target" id="classsemsim_1_1CompositeAnnotation_1a3853904ce49eed425ef4835d25c40c9b"></span><em class="property">virtual</em> void <code class="sig-name descname">serializeToRDF</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="relation.html#_CPPv4N6semsim3URIE" title="semsim::URI">URI</a> &amp;<em>sbml_base_uri</em>, raptor_world *<em>world</em>, raptor_serializer *<em>serializer</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6semsim19CompositeAnnotation14serializeToRDFERK3URIP12raptor_worldP17raptor_serializer" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Serialize this annotation to RDF using the Raptor library. The RDF serialization format is chosen when initializing the <code class="docutils literal notranslate"><span class="pre">raptor_serializer</span></code>, and must be done before calling this function. <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">world</span></code>: Raptor world object. Must be initialized prior to calling this function. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serializer</span></code>: Raptor serializer object. Must be initialized prior to calling this function. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6semsim19CompositeAnnotation9getMetaIdEv">
+<span id="_CPPv3NK6semsim19CompositeAnnotation9getMetaIdEv"></span><span id="_CPPv2NK6semsim19CompositeAnnotation9getMetaIdEv"></span><span id="semsim::CompositeAnnotation::getMetaIdC"></span><span class="target" id="classsemsim_1_1CompositeAnnotation_1a50d02ffa54980a2e61ebf659c1366ba8"></span><em class="property">const</em> std::string &amp;<code class="sig-name descname">getMetaId</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6semsim19CompositeAnnotation9getMetaIdEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a> for this element (usually a local identifier). </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6semsim19CompositeAnnotation9setMetaIdERKNSt6stringE">
+<span id="_CPPv3N6semsim19CompositeAnnotation9setMetaIdERKNSt6stringE"></span><span id="_CPPv2N6semsim19CompositeAnnotation9setMetaIdERKNSt6stringE"></span><span id="semsim::CompositeAnnotation::setMetaId__ssCR"></span><span class="target" id="classsemsim_1_1CompositeAnnotation_1acb5255b0b8c94b75bdb1e39cdb57e981"></span>void <code class="sig-name descname">setMetaId</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>metaid</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6semsim19CompositeAnnotation9setMetaIdERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the meta id for this annotation. <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">metaid</span></code>: The meta id. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6semsim19CompositeAnnotation13makeCompositeERK16PhysicalProperty">
+<span id="_CPPv3NK6semsim19CompositeAnnotation13makeCompositeERK16PhysicalProperty"></span><span id="_CPPv2NK6semsim19CompositeAnnotation13makeCompositeERK16PhysicalProperty"></span><span id="semsim::CompositeAnnotation::makeComposite__PhysicalPropertyCRC"></span><span class="target" id="classsemsim_1_1CompositeAnnotation_1a454432949ce5a70a40c4c11a8804f2e8"></span>AnnotationPtr <code class="sig-name descname">makeComposite</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="physical_property.html#_CPPv4N6semsim16PhysicalPropertyE" title="semsim::PhysicalProperty">PhysicalProperty</a> &amp;<em>prop</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6semsim19CompositeAnnotation13makeCompositeERK16PhysicalProperty" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Convert singular annotations to composite annotations by copying their definitions and terms. Effect when called on an instance of <a class="reference internal" href="#classsemsim_1_1CompositeAnnotation"><span class="std std-ref">CompositeAnnotation</span></a> is to create a clone. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>A new composite annotation </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="singular_annotation.html" class="btn btn-neutral float-right" title="SingularAnnotation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="physical_property.html" class="btn btn-neutral" title="PhysicalProperty" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, J Kyle Medley, Prakhar Agarwal.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

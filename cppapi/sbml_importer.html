@@ -1,0 +1,386 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>SBMLImporter &mdash; SemSim 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="SBML Functions" href="sbml_functions.html" />
+    <link rel="prev" title="SBML Import / Export" href="sbml.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SemSim
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="uri.html">URI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relation.html">Relation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="biomodels_qualifiers.html">Biomodels Qualifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource.html">Resource</a></li>
+<li class="toctree-l2"><a class="reference internal" href="entity.html">Entity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="entity_descriptor.html">EntityDescriptor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="descriptor_term.html">DescriptorTerm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physical_property.html">PhysicalProperty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="composite_annotation.html">CompositeAnnotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="singular_annotation.html">SingularAnnotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="component.html">Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model.html">Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ontologies.html">Ontologies</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="sbml.html">SBML Import / Export</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">SBMLImporter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sbml_functions.html">SBML Functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SemSim</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">C++ API</a> &raquo;</li>
+        
+          <li><a href="sbml.html">SBML Import / Export</a> &raquo;</li>
+        
+      <li>SBMLImporter</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/cppapi/sbml_importer.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sbmlimporter">
+<span id="sbml-importer"></span><h1>SBMLImporter<a class="headerlink" href="#sbmlimporter" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="_CPPv4N6semsim12SBMLImporterE">
+<span id="_CPPv3N6semsim12SBMLImporterE"></span><span id="_CPPv2N6semsim12SBMLImporterE"></span><span id="semsim::SBMLImporter"></span><span class="target" id="classsemsim_1_1SBMLImporter"></span><em class="property">class </em><code class="sig-name descname">SBMLImporter</code><a class="headerlink" href="#_CPPv4N6semsim12SBMLImporterE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>This class allows importing SBML models and converting them into SemSim <a class="reference internal" href="model.html#classsemsim_1_1Model"><span class="std std-ref">Models</span></a>, which contain semantic information about the original SBML model. Most of the functions documented for this class are protected methods used to implement internal logic. Usage of this class is as follows:</p>
+<p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">libsbml</span><span class="o">::</span><span class="n">SBMLDocument</span><span class="o">*</span> <span class="n">d</span> <span class="o">=</span> <span class="p">...;</span>
+<span class="c1">// import the SBML document</span>
+<span class="n">semsim</span><span class="o">::</span><span class="n">SBMLImporter</span> <span class="n">importer</span><span class="p">(</span><span class="n">d</span><span class="p">);</span>
+<span class="c1">// get the libSemSim wrapper for the SBML model</span>
+<span class="k">const</span> <span class="n">semsim</span><span class="o">::</span><span class="n">SBMLModel</span><span class="o">&amp;</span> <span class="n">model</span> <span class="o">=</span> <span class="n">importer</span><span class="p">.</span><span class="n">getSBMLModel</span><span class="p">();</span>
+<span class="c1">// do something with the semsim::SBMLModel</span>
+</pre></div>
+</div>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt>
+<span class="target" id="classsemsim_1_1SBMLImporter_1ab3dd6c7243853ec404c52a483219a102"></span><code class="sig-name descname">semsim::SBMLImporter::SBMLImporter(LIBSBML_CPP_NAMESPACE_QUALIFIER SBMLDocument * d)</code></dt>
+<dd><p>Construct a libSemSim SBMLModel from an SBML document. <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">d</span></code>: The input SBML document. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6semsim12SBMLImporter12getSBMLModelEv">
+<span id="_CPPv3N6semsim12SBMLImporter12getSBMLModelEv"></span><span id="_CPPv2N6semsim12SBMLImporter12getSBMLModelEv"></span><span id="semsim::SBMLImporter::getSBMLModel"></span><span class="target" id="classsemsim_1_1SBMLImporter_1a497be7e63642481288f29b35532e7021"></span>SBMLModel &amp;<code class="sig-name descname">getSBMLModel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6semsim12SBMLImporter12getSBMLModelEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return the SBMLModel converted from this document. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6semsim12SBMLImporter12getSBMLModelEv">
+<span id="_CPPv3NK6semsim12SBMLImporter12getSBMLModelEv"></span><span id="_CPPv2NK6semsim12SBMLImporter12getSBMLModelEv"></span><span id="semsim::SBMLImporter::getSBMLModelC"></span><span class="target" id="classsemsim_1_1SBMLImporter_1ac03636367f9e6ac69c11b2d91333bc8e"></span><em class="property">const</em> SBMLModel &amp;<code class="sig-name descname">getSBMLModel</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6semsim12SBMLImporter12getSBMLModelEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return the SBMLModel converted from this document. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Protected Functions</p>
+<dl class="function">
+<dt>
+<span class="target" id="classsemsim_1_1SBMLImporter_1a20a3fe52d254d46d4e514d1c6993aaa1"></span><code class="sig-name descname">AnnotationPtr semsim::SBMLImporter::extractAnnotation(LIBSBML_CPP_NAMESPACE_QUALIFIER SBase * s)</code></dt>
+<dd><p>Extract the annotation for any SBML element. </p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="classsemsim_1_1SBMLImporter_1aa953728c678be1dbd0cae655454f9033"></span><code class="sig-name descname">AnnotationPtr semsim::SBMLImporter::extractAnnotation(LIBSBML_CPP_NAMESPACE_QUALIFIER Species * s)</code></dt>
+<dd><p>Extract the annotation for a species - can be composite using automatic inference logic. </p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="classsemsim_1_1SBMLImporter_1ae1516df27d459c8f00579c0958f745b5"></span><code class="sig-name descname">AnnotationPtr semsim::SBMLImporter::extractAnnotation(LIBSBML_CPP_NAMESPACE_QUALIFIER Compartment * c)</code></dt>
+<dd><p>Extract the annotation for a compartment. </p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="classsemsim_1_1SBMLImporter_1a50d7ca4ae182a888b3c609d33e223d48"></span><code class="sig-name descname">SingularAnnotation semsim::SBMLImporter::extractSingularAnnotation(LIBSBML_CPP_NAMESPACE_QUALIFIER SBase * s)</code></dt>
+<dd><p>Extract a singular annotation from an SBML object. This method is used when a composite annotation cannot be inferred. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>A singular annotation containing all bqb:is terms as definitions and all other relations as extraneous terms. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: The SBML object </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="classsemsim_1_1SBMLImporter_1aa97a1f699f36d15c080d2d98795e59c1"></span><code class="sig-name descname">EntityDescriptor semsim::SBMLImporter::extractSpeciesEntityDescriptor(LIBSBML_CPP_NAMESPACE_QUALIFIER Species * s)</code></dt>
+<dd><p>Extract an <a class="reference internal" href="entity.html#classsemsim_1_1Entity"><span class="std std-ref">Entity</span></a> from an SBML object. Uses identical logic to ExtractSingularAnnotation <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>A singular annotation containing all bqb:is terms as definitions and all other relations as extraneous terms. Extract the <a class="reference internal" href="entity_descriptor.html#classsemsim_1_1EntityDescriptor"><span class="std std-ref">EntityDescriptor</span></a> for an SBML species. The <a class="reference internal" href="entity_descriptor.html#classsemsim_1_1EntityDescriptor"><span class="std std-ref">EntityDescriptor</span></a> may contain the enclosing compartment (if any) referenced with a bqb:occursIn qualifier. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: The SBML object </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="classsemsim_1_1SBMLImporter_1a42d3ee24c901825488de6c2f2b0a6053"></span><code class="sig-name descname">Entity semsim::SBMLImporter::extractSpeciesEntity(LIBSBML_CPP_NAMESPACE_QUALIFIER Species * s)</code></dt>
+<dd><p>Try to deduce the <a class="reference internal" href="entity.html#classsemsim_1_1Entity"><span class="std std-ref">Entity</span></a> from an SBML species. If the species is contained in a compartment, the compartment will be included in the <a class="reference internal" href="entity_descriptor.html#classsemsim_1_1EntityDescriptor"><span class="std std-ref">EntityDescriptor</span></a> using the bqb:occursIn qualifier. </p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="classsemsim_1_1SBMLImporter_1a586c441d1f8783e7e850d979cf5bcda8"></span><code class="sig-name descname">Component* semsim::SBMLImporter::getComponentFor(LIBSBML_CPP_NAMESPACE_QUALIFIER SBase * s)</code></dt>
+<dd><p>Return a Object weak pointer for the specified object (if it is in the SBMLModel). </p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="classsemsim_1_1SBMLImporter_1af66ec988b8df7c42e2de2f0ff727c67d"></span><code class="sig-name descname">Resource semsim::SBMLImporter::getResourceFor(LIBSBML_CPP_NAMESPACE_QUALIFIER SBase * s)</code></dt>
+<dd><p>Return a <a class="reference internal" href="resource.html#classsemsim_1_1Resource"><span class="std std-ref">Resource</span></a> for the specified object (if it is in the SBMLModel). </p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<span class="target" id="classsemsim_1_1SBMLImporter_1a57fb1b32e0d8511aa8c7f4043f6b4b69"></span><code class="sig-name descname">CompositeAnnotation semsim::SBMLImporter::extractCompositeAnnotation(LIBSBML_CPP_NAMESPACE_QUALIFIER Species * s)</code></dt>
+<dd><p>Extract a composite annotation from an SBML Species. There are several pieces of information libSemSim tries to use to automatically construct composite annotations for SBML species. <ul class="simple">
+<li><p>The <a class="reference internal" href="physical_property.html#classsemsim_1_1PhysicalProperty"><span class="std std-ref">PhysicalProperty</span></a> can sometimes be deduced from substance attributes and units. See SpeciesToPhysicalProperty. </p></li>
+<li><p>If the species is contained in a compartment, the <a class="reference internal" href="entity_descriptor.html#classsemsim_1_1EntityDescriptor"><span class="std std-ref">EntityDescriptor</span></a> can contain a reference to the compartment with a bqb:occursIn qualifier. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The automatically inferred composite annotation. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist">
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: The input SBML species. </p></li>
+</ul>
+</dd>
+</dl>
+</p></li>
+</ul>
+</p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Protected Static Functions</p>
+<dl class="function">
+<dt>
+<span class="target" id="classsemsim_1_1SBMLImporter_1a71acfa21f8bbd686770651bd090a5e41"></span><code class="sig-name descname">static void semsim::SBMLImporter::populateDefinitionsAndTerms(LIBSBML_CPP_NAMESPACE_QUALIFIER SBase * s, EntityBase  &amp; e)</code></dt>
+<dd><p>Populate the <em>definitions</em> (URIs specified in CV terms via bqb:is terms) and extraneous terms (URIs specified using any other qualifier) for a <a class="reference internal" href="singular_annotation.html#classsemsim_1_1SingularAnnotation"><span class="std std-ref">SingularAnnotation</span></a> or <a class="reference internal" href="entity.html#classsemsim_1_1Entity"><span class="std std-ref">Entity</span></a> in a <a class="reference internal" href="composite_annotation.html#classsemsim_1_1CompositeAnnotation"><span class="std std-ref">CompositeAnnotation</span></a>. <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: The input SBML object </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: The object to populate. Can be either a <a class="reference internal" href="singular_annotation.html#classsemsim_1_1SingularAnnotation"><span class="std std-ref">SingularAnnotation</span></a> or <a class="reference internal" href="entity.html#classsemsim_1_1Entity"><span class="std std-ref">Entity</span></a>. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="sbml_functions.html" class="btn btn-neutral float-right" title="SBML Functions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="sbml.html" class="btn btn-neutral" title="SBML Import / Export" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, J Kyle Medley, Prakhar Agarwal.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

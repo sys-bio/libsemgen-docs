@@ -1,0 +1,310 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Relation &mdash; SemSim 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Biomodels Qualifiers" href="biomodels_qualifiers.html" />
+    <link rel="prev" title="URI" href="uri.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SemSim
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="uri.html">URI</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Relation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="biomodels_qualifiers.html">Biomodels Qualifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource.html">Resource</a></li>
+<li class="toctree-l2"><a class="reference internal" href="entity.html">Entity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="entity_descriptor.html">EntityDescriptor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="descriptor_term.html">DescriptorTerm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physical_property.html">PhysicalProperty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="composite_annotation.html">CompositeAnnotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="singular_annotation.html">SingularAnnotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="component.html">Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model.html">Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ontologies.html">Ontologies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sbml.html">SBML Import / Export</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SemSim</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">C++ API</a> &raquo;</li>
+        
+      <li>Relation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/cppapi/relation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="relation">
+<span id="id1"></span><h1>Relation<a class="headerlink" href="#relation" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="_CPPv4N6semsim3URIE">
+<span id="_CPPv3N6semsim3URIE"></span><span id="_CPPv2N6semsim3URIE"></span><span id="semsim::URI"></span><span class="target" id="classsemsim_1_1URI"></span><em class="property">class </em><code class="sig-name descname">URI</code><a class="headerlink" href="#_CPPv4N6semsim3URIE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A <a class="reference internal" href="#classsemsim_1_1URI"><span class="std std-ref">URI</span></a> class used in semgen. <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">uri_encoding</span></code>: A string encoding of the <a class="reference internal" href="#classsemsim_1_1URI"><span class="std std-ref">URI</span></a>. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N6semsim3URI3URIEv">
+<span id="_CPPv3N6semsim3URI3URIEv"></span><span id="_CPPv2N6semsim3URI3URIEv"></span><span id="semsim::URI::URI"></span><span class="target" id="classsemsim_1_1URI_1ab71e8134dceb79700a19bc1d9c2e1fcb"></span><code class="sig-name descname">URI</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6semsim3URI3URIEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Empty constructor. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6semsim3URI3URIERKNSt6stringE">
+<span id="_CPPv3N6semsim3URI3URIERKNSt6stringE"></span><span id="_CPPv2N6semsim3URI3URIERKNSt6stringE"></span><span id="semsim::URI::URI__ssCR"></span><span class="target" id="classsemsim_1_1URI_1a92c3207c5ebd6e9dc204a3ba3fee2ca7"></span><code class="sig-name descname">URI</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>uri</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6semsim3URI3URIERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct from string-encoded <a class="reference internal" href="#classsemsim_1_1URI"><span class="std std-ref">URI</span></a>. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N6semsim3URI3URIEPKc">
+<span id="_CPPv3N6semsim3URI3URIEPKc"></span><span id="_CPPv2N6semsim3URI3URIEPKc"></span><span id="semsim::URI::URI__cCP"></span><span class="target" id="classsemsim_1_1URI_1a800d693d5efc450ef96d7cb3bf12a153"></span><code class="sig-name descname">URI</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>uri</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6semsim3URI3URIEPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct from a string literal. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6semsim3URI8toStringEv">
+<span id="_CPPv3NK6semsim3URI8toStringEv"></span><span id="_CPPv2NK6semsim3URI8toStringEv"></span><span id="semsim::URI::toStringC"></span><span class="target" id="classsemsim_1_1URI_1ac6a57ff24fbd10f6752385c6916e3da9"></span>std::string <code class="sig-name descname">toString</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6semsim3URI8toStringEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Convert to human-readable string. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6semsim3URI6encodeEv">
+<span id="_CPPv3NK6semsim3URI6encodeEv"></span><span id="_CPPv2NK6semsim3URI6encodeEv"></span><span id="semsim::URI::encodeC"></span><span class="target" id="classsemsim_1_1URI_1a3c5eb3759e92b1181c1f863a699c923d"></span>std::string <code class="sig-name descname">encode</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6semsim3URI6encodeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Convert to encoded UTF-8 <a class="reference internal" href="#classsemsim_1_1URI"><span class="std std-ref">URI</span></a> string (possibly different from human-readable string). </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6semsim3URI12appendToFragERKNSt6stringE">
+<span id="_CPPv3NK6semsim3URI12appendToFragERKNSt6stringE"></span><span id="_CPPv2NK6semsim3URI12appendToFragERKNSt6stringE"></span><span id="semsim::URI::appendToFrag__ssCRC"></span><span class="target" id="classsemsim_1_1URI_1a0b4f122f5ed22d45fcab21abb657262c"></span><a class="reference internal" href="#_CPPv4N6semsim3URIE" title="semsim::URI">URI</a> <code class="sig-name descname">appendToFrag</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>suffix</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6semsim3URI12appendToFragERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Append to the fragment part of the <a class="reference internal" href="#classsemsim_1_1URI"><span class="std std-ref">URI</span></a>. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The new <a class="reference internal" href="#classsemsim_1_1URI"><span class="std std-ref">URI</span></a>. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">suffix</span></code>: The string to append to the fragment. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6semsim3URI8withFragERKNSt6stringE">
+<span id="_CPPv3NK6semsim3URI8withFragERKNSt6stringE"></span><span id="_CPPv2NK6semsim3URI8withFragERKNSt6stringE"></span><span id="semsim::URI::withFrag__ssCRC"></span><span class="target" id="classsemsim_1_1URI_1a0e94c067927ede929ca188c753c6f0c9"></span><a class="reference internal" href="#_CPPv4N6semsim3URIE" title="semsim::URI">URI</a> <code class="sig-name descname">withFrag</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>suffix</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6semsim3URI8withFragERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the fragment part of the <a class="reference internal" href="#classsemsim_1_1URI"><span class="std std-ref">URI</span></a> to the given string and return it as a new <a class="reference internal" href="#classsemsim_1_1URI"><span class="std std-ref">URI</span></a>. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The new <a class="reference internal" href="#classsemsim_1_1URI"><span class="std std-ref">URI</span></a>. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">suffix</span></code>: The string to append to the fragment. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="biomodels_qualifiers.html" class="btn btn-neutral float-right" title="Biomodels Qualifiers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="uri.html" class="btn btn-neutral" title="URI" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, J Kyle Medley, Prakhar Agarwal.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
