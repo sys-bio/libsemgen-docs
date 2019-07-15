@@ -407,28 +407,28 @@
   <span class="c1">// the compartment currently has a *singular annotation*, which can&#39;t</span>
   <span class="c1">// represent membership in a &quot;pancreatic beta cell&quot;, so we change this to</span>
   <span class="c1">// a composite annotation</span>
-  <span class="n">Component</span><span class="o">*</span> <span class="n">c</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="n">getComponentForId</span><span class="p">(</span><span class="s">&quot;cytosol&quot;</span><span class="p">);</span>
-  <span class="n">c</span><span class="o">-&gt;</span><span class="n">setAnnotation</span><span class="p">(</span><span class="n">c</span><span class="o">-&gt;</span><span class="n">getAnnotation</span><span class="p">().</span><span class="n">makeComposite</span><span class="p">(</span><span class="n">OPB</span><span class="o">::</span><span class="n">get</span><span class="p">(</span><span class="mi">523</span><span class="p">)));</span> <span class="c1">// 523 is spatial volume</span>
-  <span class="c1">// now add a descriptor term specifying that the cytoplasm</span>
+<span class="hll">  <span class="n">Component</span><span class="o">*</span> <span class="n">c</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="n">getComponentForId</span><span class="p">(</span><span class="s">&quot;cytosol&quot;</span><span class="p">);</span>
+</span><span class="hll">  <span class="n">c</span><span class="o">-&gt;</span><span class="n">setAnnotation</span><span class="p">(</span><span class="n">c</span><span class="o">-&gt;</span><span class="n">getAnnotation</span><span class="p">().</span><span class="n">makeComposite</span><span class="p">(</span><span class="n">OPB</span><span class="o">::</span><span class="n">get</span><span class="p">(</span><span class="mi">523</span><span class="p">)));</span> <span class="c1">// 523 is spatial volume</span>
+</span>  <span class="c1">// now add a descriptor term specifying that the cytoplasm</span>
   <span class="c1">// is part of a pancreatic beta cell (CL:0000169)</span>
-  <span class="n">c</span><span class="o">-&gt;</span><span class="n">getCompositeAnnotation</span><span class="p">().</span><span class="n">addTerm</span><span class="p">(</span>
-    <span class="n">bqb</span><span class="o">::</span><span class="n">isPartOf</span><span class="p">,</span> <span class="c1">// the relation (the cytoplasm *is part of* ...)</span>
-    <span class="n">CL</span><span class="o">::</span><span class="n">get</span><span class="p">(</span><span class="mi">169</span><span class="p">)</span>   <span class="c1">// the resource (pancreatic beta cell)</span>
-  <span class="p">);</span>
-
+<span class="hll">  <span class="n">c</span><span class="o">-&gt;</span><span class="n">getCompositeAnnotation</span><span class="p">().</span><span class="n">addTerm</span><span class="p">(</span>
+</span><span class="hll">    <span class="n">bqb</span><span class="o">::</span><span class="n">isPartOf</span><span class="p">,</span> <span class="c1">// the relation (the cytoplasm *is part of* ...)</span>
+</span><span class="hll">    <span class="n">CL</span><span class="o">::</span><span class="n">get</span><span class="p">(</span><span class="mi">169</span><span class="p">)</span>   <span class="c1">// the resource (pancreatic beta cell)</span>
+</span><span class="hll">  <span class="p">);</span>
+</span>
   <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;**********************************************************</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
   <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;RDF serialization with cell type annotation:</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
   <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;**********************************************************</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">;</span>
 
-  <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="n">model</span><span class="p">.</span><span class="n">getRDF</span><span class="p">(</span><span class="s">&quot;./mymodel.xml&quot;</span><span class="p">,</span> <span class="s">&quot;turtle&quot;</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="hll">  <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="n">model</span><span class="p">.</span><span class="n">getRDF</span><span class="p">(</span><span class="s">&quot;./mymodel.xml&quot;</span><span class="p">,</span> <span class="s">&quot;turtle&quot;</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;**********************************************************</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Humanized version of the annotation information</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;(ontology terms replaced by human-readable names):</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;**********************************************************</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">;</span>
 
-<span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;**********************************************************</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Humanized version of the annotation information</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;(ontology terms replaced by human-readable names):</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;**********************************************************</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">;</span>
-
-<span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="n">model</span><span class="p">.</span><span class="n">humanize</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
-
+<span class="hll">  <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="n">model</span><span class="p">.</span><span class="n">humanize</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+</span>
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>

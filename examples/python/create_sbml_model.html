@@ -314,29 +314,29 @@
 <span class="c1"># print the raw SBML content</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;**********************************************************&#39;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;SBML output:&#39;</span><span class="p">)</span>
-<span class="hll"><span class="k">print</span><span class="p">(</span><span class="s1">&#39;**********************************************************&#39;</span><span class="p">)</span>
-</span><span class="k">print</span><span class="p">(</span><span class="n">sbml</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;**********************************************************&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sbml</span><span class="p">)</span>
 
 <span class="c1"># import the model into libSemSim</span>
 <span class="hll"><span class="kn">import</span> <span class="nn">semsim</span>
-</span><span class="kn">from</span> <span class="nn">semsim</span> <span class="kn">import</span> <span class="n">OPB</span><span class="p">,</span> <span class="n">CL</span><span class="p">,</span> <span class="n">PhysicalProperty</span><span class="p">,</span> <span class="n">bqb</span>
-<span class="hll">
-</span><span class="c1"># importing the model into libSemSim will automatically</span>
+</span><span class="hll"><span class="kn">from</span> <span class="nn">semsim</span> <span class="kn">import</span> <span class="n">OPB</span><span class="p">,</span> <span class="n">CL</span><span class="p">,</span> <span class="n">PhysicalProperty</span><span class="p">,</span> <span class="n">bqb</span>
+</span>
+<span class="c1"># importing the model into libSemSim will automatically</span>
 <span class="c1"># add metaids for any annotatable SBML elements that lack them</span>
-<span class="n">importer</span> <span class="o">=</span> <span class="n">semsim</span><span class="o">.</span><span class="n">SBMLImporter</span><span class="p">(</span><span class="n">sbml</span><span class="p">)</span>
-
-<span class="n">model</span> <span class="o">=</span> <span class="n">importer</span><span class="o">.</span><span class="n">getSBMLModel</span><span class="p">()</span>
-
+<span class="hll"><span class="n">importer</span> <span class="o">=</span> <span class="n">semsim</span><span class="o">.</span><span class="n">SBMLImporter</span><span class="p">(</span><span class="n">sbml</span><span class="p">)</span>
+</span>
+<span class="hll"><span class="n">model</span> <span class="o">=</span> <span class="n">importer</span><span class="o">.</span><span class="n">getSBMLModel</span><span class="p">()</span>
+</span>
 <span class="c1"># print the extracted annotations as RDF</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;**********************************************************&#39;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;RDF serialization of annotations:&#39;</span><span class="p">)</span>
-<span class="hll"><span class="k">print</span><span class="p">(</span><span class="s1">&#39;**********************************************************</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;**********************************************************</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
 <span class="c1"># the RDF always needs the location of the original SBML file</span>
 <span class="c1"># (which is actually a URI)</span>
 <span class="c1"># for COMBINE archives, this will be a relative path inside the archive</span>
-<span class="k">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">getRDF</span><span class="p">(</span><span class="s1">&#39;./my-sbml-file.xml&#39;</span><span class="p">,</span> <span class="s1">&#39;turtle&#39;</span><span class="p">))</span>
-
+<span class="hll"><span class="k">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">getRDF</span><span class="p">(</span><span class="s1">&#39;./my-sbml-file.xml&#39;</span><span class="p">,</span> <span class="s1">&#39;turtle&#39;</span><span class="p">))</span>
+</span>
 <span class="c1"># this isn&#39;t bad - the RDF already contains a composite annotation</span>
 <span class="c1"># telling is that the species &quot;glucose&quot; is inside the &quot;cytosol&quot;</span>
 <span class="c1"># we currently have &quot;cytosolic glucose&quot;</span>
@@ -347,16 +347,16 @@
 <span class="c1"># the compartment currently has a *singular annotation*, which can&#39;t</span>
 <span class="c1"># represent membership in a &quot;pancreatic beta cell&quot;, so we change this to</span>
 <span class="c1"># a composite annotation</span>
-<span class="n">c</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">getComponentForId</span><span class="p">(</span><span class="s1">&#39;cytosol&#39;</span><span class="p">)</span>
-<span class="n">c</span><span class="o">.</span><span class="n">setAnnotation</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">getAnnotation</span><span class="p">()</span><span class="o">.</span><span class="n">makeComposite</span><span class="p">(</span><span class="n">PhysicalProperty</span><span class="p">(</span><span class="n">OPB</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">523</span><span class="p">))))</span>
-
+<span class="hll"><span class="n">c</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">getComponentForId</span><span class="p">(</span><span class="s1">&#39;cytosol&#39;</span><span class="p">)</span>
+</span><span class="hll"><span class="n">c</span><span class="o">.</span><span class="n">setAnnotation</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">getAnnotation</span><span class="p">()</span><span class="o">.</span><span class="n">makeComposite</span><span class="p">(</span><span class="n">PhysicalProperty</span><span class="p">(</span><span class="n">OPB</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">523</span><span class="p">))))</span>
+</span>
 <span class="c1"># now add a descriptor term specifying that the cytoplasm</span>
 <span class="c1">#is part of a pancreatic beta cell (CL:0000169)</span>
-<span class="n">c</span><span class="o">.</span><span class="n">getCompositeAnnotation</span><span class="p">()</span><span class="o">.</span><span class="n">addTerm</span><span class="p">(</span>
-    <span class="n">bqb</span><span class="o">.</span><span class="n">isPartOf</span><span class="p">,</span> <span class="c1"># the relation (the cytoplasm *is part of* ...)</span>
-    <span class="n">CL</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">169</span><span class="p">)</span>   <span class="c1"># the resource (pancreatic beta cell)</span>
-<span class="p">)</span>
-
+<span class="hll"><span class="n">c</span><span class="o">.</span><span class="n">getCompositeAnnotation</span><span class="p">()</span><span class="o">.</span><span class="n">addTerm</span><span class="p">(</span>
+</span><span class="hll">    <span class="n">bqb</span><span class="o">.</span><span class="n">isPartOf</span><span class="p">,</span> <span class="c1"># the relation (the cytoplasm *is part of* ...)</span>
+</span><span class="hll">    <span class="n">CL</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">169</span><span class="p">)</span>   <span class="c1"># the resource (pancreatic beta cell)</span>
+</span><span class="hll"><span class="p">)</span>
+</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;**********************************************************&#39;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;RDF serialization with cell type annotation:&#39;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;**********************************************************</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
@@ -364,15 +364,15 @@
 <span class="c1"># the RDF always needs the location of the original SBML file</span>
 <span class="c1"># (which is actually a URI)</span>
 <span class="c1"># for COMBINE archives, this will be a relative path inside the archive</span>
-<span class="k">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">getRDF</span><span class="p">(</span><span class="s1">&#39;./my-sbml-file.xml&#39;</span><span class="p">,</span> <span class="s1">&#39;turtle&#39;</span><span class="p">))</span>
-
+<span class="hll"><span class="k">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">getRDF</span><span class="p">(</span><span class="s1">&#39;./my-sbml-file.xml&#39;</span><span class="p">,</span> <span class="s1">&#39;turtle&#39;</span><span class="p">))</span>
+</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;**********************************************************&#39;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Humanized version of the annotation information&#39;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;(ontology terms replaced by human-readable names):&#39;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;**********************************************************</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">humanize</span><span class="p">())</span>
-</pre></div>
+<span class="hll"><span class="k">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">humanize</span><span class="p">())</span>
+</span></pre></div>
 </td></tr></table></div>
 <div class="section" id="expected-output">
 <h2>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
