@@ -18,32 +18,34 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="#" />
     <link rel="search" title="Search" href="search.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -167,6 +169,8 @@
 </li>
       <li><a href="cppapi/component.html#_CPPv4N6semsim9Component22getCompositeAnnotationEv">semsim::Component::getCompositeAnnotation (C++ function)</a>, <a href="cppapi/component.html#_CPPv4NK6semsim9Component22getCompositeAnnotationEv">[1]</a>
 </li>
+      <li><a href="cppapi/component.html#_CPPv4NK6semsim9Component8humanizeEv">semsim::Component::humanize (C++ function)</a>
+</li>
       <li><a href="cppapi/component.html#_CPPv4N6semsim9Component13setAnnotationEP14AnnotationBase">semsim::Component::setAnnotation (C++ function)</a>, <a href="cppapi/component.html#_CPPv4N6semsim9Component13setAnnotationERK14AnnotationBase">[1]</a>
 </li>
       <li><a href="cppapi/composite_annotation.html#_CPPv4N6semsim19CompositeAnnotationE">semsim::CompositeAnnotation (C++ class)</a>
@@ -180,6 +184,8 @@
       <li><a href="cppapi/composite_annotation.html#_CPPv4N6semsim19CompositeAnnotation9getEntityEv">semsim::CompositeAnnotation::getEntity (C++ function)</a>, <a href="cppapi/composite_annotation.html#_CPPv4NK6semsim19CompositeAnnotation9getEntityEv">[1]</a>
 </li>
       <li><a href="cppapi/composite_annotation.html#_CPPv4NK6semsim19CompositeAnnotation9getMetaIdEv">semsim::CompositeAnnotation::getMetaId (C++ function)</a>
+</li>
+      <li><a href="cppapi/composite_annotation.html#_CPPv4NK6semsim19CompositeAnnotation8humanizeEv">semsim::CompositeAnnotation::humanize (C++ function)</a>
 </li>
       <li><a href="cppapi/composite_annotation.html#_CPPv4NK6semsim19CompositeAnnotation13isEntityEmptyEv">semsim::CompositeAnnotation::isEntityEmpty (C++ function)</a>
 </li>
@@ -207,13 +213,17 @@
 </li>
       <li><a href="cppapi/entity.html#_CPPv4NK6semsim6Entity17getNumDescriptorsEv">semsim::Entity::getNumDescriptors (C++ function)</a>
 </li>
+      <li><a href="cppapi/entity.html#_CPPv4NK6semsim6Entity8humanizeEv">semsim::Entity::humanize (C++ function)</a>
+</li>
       <li><a href="cppapi/entity.html#_CPPv4NK6semsim6Entity14serializeToRDFERK3URIP12raptor_worldP17raptor_serializer">semsim::Entity::serializeToRDF (C++ function)</a>
 </li>
       <li><a href="cppapi/entity_descriptor.html#_CPPv4N6semsim16EntityDescriptorE">semsim::EntityDescriptor (C++ class)</a>
 </li>
       <li><a href="cppapi/entity_descriptor.html#_CPPv4N6semsim16EntityDescriptor7addTermERK14DescriptorTerm">semsim::EntityDescriptor::addTerm (C++ function)</a>, <a href="cppapi/entity_descriptor.html#_CPPv4N6semsim16EntityDescriptor7addTermERK8RelationRK8Resource">[1]</a>
 </li>
-      <li><a href="cppapi/entity_descriptor.html#_CPPv4N6semsim16EntityDescriptor16EntityDescriptorEv">semsim::EntityDescriptor::EntityDescriptor (C++ function)</a>
+      <li><a href="cppapi/entity_descriptor.html#_CPPv4N6semsim16EntityDescriptor16EntityDescriptorERK16EntityDescriptor">semsim::EntityDescriptor::EntityDescriptor (C++ function)</a>, <a href="cppapi/entity_descriptor.html#_CPPv4N6semsim16EntityDescriptor16EntityDescriptorERR16EntityDescriptor">[1]</a>, <a href="cppapi/entity_descriptor.html#_CPPv4N6semsim16EntityDescriptor16EntityDescriptorEv">[2]</a>
+</li>
+      <li><a href="cppapi/entity_descriptor.html#_CPPv4NK6semsim16EntityDescriptor8humanizeEv">semsim::EntityDescriptor::humanize (C++ function)</a>
 </li>
       <li><a href="cppapi/entity_descriptor.html#_CPPv4NK6semsim16EntityDescriptor7isEmptyEv">semsim::EntityDescriptor::isEmpty (C++ function)</a>
 </li>
@@ -225,13 +235,19 @@
 </li>
       <li><a href="cppapi/model.html#_CPPv4N6semsim5Model10ComponentsE">semsim::Model::Components (C++ type)</a>
 </li>
-      <li><a href="cppapi/model.html#_CPPv4N6semsim5Model13getComponentsEv">semsim::Model::getComponents (C++ function)</a>, <a href="cppapi/model.html#_CPPv4NK6semsim5Model13getComponentsEv">[1]</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="cppapi/model.html#_CPPv4NK6semsim5Model9encodeXMLEv">semsim::Model::encodeXML (C++ function)</a>
+</li>
+      <li><a href="cppapi/model.html#_CPPv4N6semsim5Model13getComponentsEv">semsim::Model::getComponents (C++ function)</a>, <a href="cppapi/model.html#_CPPv4NK6semsim5Model13getComponentsEv">[1]</a>
+</li>
+      <li><a href="cppapi/model.html#_CPPv4NK6semsim5Model9getFormatEv">semsim::Model::getFormat (C++ function)</a>
+</li>
       <li><a href="cppapi/model.html#_CPPv4NK6semsim5Model16getNumComponentsEv">semsim::Model::getNumComponents (C++ function)</a>
 </li>
       <li><a href="cppapi/model.html#_CPPv4NK6semsim5Model6getRDFERK3URIRKNSt6stringE">semsim::Model::getRDF (C++ function)</a>
+</li>
+      <li><a href="cppapi/model.html#_CPPv4NK6semsim5Model8humanizeEv">semsim::Model::humanize (C++ function)</a>
 </li>
       <li><a href="cppapi/model.html#_CPPv4N6semsim5ModelD0Ev">semsim::Model::~Model (C++ function)</a>
 </li>
@@ -247,17 +263,25 @@
 </li>
       <li><a href="cppapi/physical_property.html#_CPPv4N6semsim16PhysicalProperty11getResourceEv">semsim::PhysicalProperty::getResource (C++ function)</a>, <a href="cppapi/physical_property.html#_CPPv4NK6semsim16PhysicalProperty11getResourceEv">[1]</a>
 </li>
+      <li><a href="cppapi/physical_property.html#_CPPv4NK6semsim16PhysicalProperty8humanizeEv">semsim::PhysicalProperty::humanize (C++ function)</a>
+</li>
       <li><a href="cppapi/physical_property.html#_CPPv4N6semsim16PhysicalProperty16PhysicalPropertyERK8Resource">semsim::PhysicalProperty::PhysicalProperty (C++ function)</a>, <a href="cppapi/physical_property.html#_CPPv4N6semsim16PhysicalProperty16PhysicalPropertyERKNSt6stringE">[1]</a>
 </li>
-      <li><a href="cppapi/uri.html#_CPPv4N6semsim8RelationE">semsim::Relation (C++ class)</a>
+      <li><a href="cppapi/relation.html#_CPPv4N6semsim8RelationE">semsim::Relation (C++ class)</a>, <a href="cppapi/uri.html#_CPPv4N6semsim8RelationE">[1]</a>
 </li>
-      <li><a href="cppapi/uri.html#_CPPv4NK6semsim8Relation6getURIEv">semsim::Relation::getURI (C++ function)</a>
+      <li><a href="cppapi/relation.html#_CPPv4NK6semsim8Relation6getURIEv">semsim::Relation::getURI (C++ function)</a>, <a href="cppapi/uri.html#_CPPv4NK6semsim8Relation6getURIEv">[1]</a>
 </li>
-      <li><a href="cppapi/uri.html#_CPPv4N6semsim8Relation8RelationERK3URI">semsim::Relation::Relation (C++ function)</a>
+      <li><a href="cppapi/relation.html#_CPPv4NK6semsim8Relation8humanizeEv">semsim::Relation::humanize (C++ function)</a>, <a href="cppapi/uri.html#_CPPv4NK6semsim8Relation8humanizeEv">[1]</a>
+</li>
+      <li><a href="cppapi/relation.html#_CPPv4NK6semsim8RelationeqERK8Relation">semsim::Relation::operator== (C++ function)</a>, <a href="cppapi/uri.html#_CPPv4NK6semsim8RelationeqERK8Relation">[1]</a>
+</li>
+      <li><a href="cppapi/relation.html#_CPPv4N6semsim8Relation8RelationERK3URI">semsim::Relation::Relation (C++ function)</a>, <a href="cppapi/uri.html#_CPPv4N6semsim8Relation8RelationERK3URI">[1]</a>
 </li>
       <li><a href="cppapi/resource.html#_CPPv4N6semsim8ResourceE">semsim::Resource (C++ class)</a>
 </li>
       <li><a href="cppapi/resource.html#_CPPv4NK6semsim8Resource6getURIERK3URI">semsim::Resource::getURI (C++ function)</a>
+</li>
+      <li><a href="cppapi/resource.html#_CPPv4NK6semsim8Resource8humanizeEv">semsim::Resource::humanize (C++ function)</a>
 </li>
       <li><a href="cppapi/resource.html#_CPPv4NK6semsim8Resource7isLocalEv">semsim::Resource::isLocal (C++ function)</a>
 </li>
@@ -277,6 +301,8 @@
 </li>
       <li><a href="cppapi/singular_annotation.html#_CPPv4NK6semsim18SingularAnnotation6getURIERK3URI">semsim::SingularAnnotation::getURI (C++ function)</a>
 </li>
+      <li><a href="cppapi/singular_annotation.html#_CPPv4NK6semsim18SingularAnnotation8humanizeEv">semsim::SingularAnnotation::humanize (C++ function)</a>
+</li>
       <li><a href="cppapi/singular_annotation.html#_CPPv4NK6semsim18SingularAnnotation13makeCompositeERK16PhysicalProperty">semsim::SingularAnnotation::makeComposite (C++ function)</a>
 </li>
       <li><a href="cppapi/singular_annotation.html#_CPPv4NK6semsim18SingularAnnotation14serializeToRDFERK3URIP12raptor_worldP17raptor_serializer">semsim::SingularAnnotation::serializeToRDF (C++ function)</a>
@@ -290,18 +316,6 @@
       <li><a href="cppapi/term.html#_CPPv4NK6semsim4Term11getResourceEv">semsim::Term::getResource (C++ function)</a>
 </li>
       <li><a href="cppapi/term.html#_CPPv4N6semsim4Term4TermERK8RelationRK8Resource">semsim::Term::Term (C++ function)</a>
-</li>
-      <li><a href="cppapi/relation.html#_CPPv4N6semsim3URIE">semsim::URI (C++ class)</a>
-</li>
-      <li><a href="cppapi/relation.html#_CPPv4NK6semsim3URI12appendToFragERKNSt6stringE">semsim::URI::appendToFrag (C++ function)</a>
-</li>
-      <li><a href="cppapi/relation.html#_CPPv4NK6semsim3URI6encodeEv">semsim::URI::encode (C++ function)</a>
-</li>
-      <li><a href="cppapi/relation.html#_CPPv4NK6semsim3URI8toStringEv">semsim::URI::toString (C++ function)</a>
-</li>
-      <li><a href="cppapi/relation.html#_CPPv4N6semsim3URI3URIEPKc">semsim::URI::URI (C++ function)</a>, <a href="cppapi/relation.html#_CPPv4N6semsim3URI3URIERKNSt6stringE">[1]</a>, <a href="cppapi/relation.html#_CPPv4N6semsim3URI3URIEv">[2]</a>
-</li>
-      <li><a href="cppapi/relation.html#_CPPv4NK6semsim3URI8withFragERKNSt6stringE">semsim::URI::withFrag (C++ function)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -318,7 +332,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, J Kyle Medley, Prakhar Agarwal.
+        &copy; Copyright 2019, J Kyle Medley, Prakhar Agarwal
 
     </p>
   </div>
@@ -335,33 +349,16 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'0.1.0',
-            LANGUAGE:'None',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/language_data.js"></script>
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

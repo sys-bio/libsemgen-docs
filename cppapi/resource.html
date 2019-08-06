@@ -17,34 +17,36 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Entity" href="entity.html" />
     <link rel="prev" title="Biomodels Qualifiers" href="biomodels_qualifiers.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -175,15 +177,15 @@
 </pre></div>
 </div>
 </p>
-<p>A <a class="reference internal" href="#classsemsim_1_1Resource"><span class="std std-ref">Resource</span></a> can also point to an element of the <a class="reference internal" href="model.html#classsemsim_1_1Model"><span class="std std-ref">Model</span></a> (an <em>internal resource</em>, useful in <a class="reference internal" href="composite_annotation.html#classsemsim_1_1CompositeAnnotation"><span class="std std-ref">CompositeAnnotations</span></a>), in which case its definition <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a> will be whatever the element’s <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a> is at the time of serialization. </p>
+<p>A <a class="reference internal" href="#classsemsim_1_1Resource"><span class="std std-ref">Resource</span></a> can also point to an element of the <a class="reference internal" href="model.html#classsemsim_1_1Model"><span class="std std-ref">Model</span></a> (an <em>internal resource</em>, useful in <a class="reference internal" href="composite_annotation.html#classsemsim_1_1CompositeAnnotation"><span class="std std-ref">CompositeAnnotations</span></a>), in which case its definition URI will be whatever the element’s URI is at the time of serialization. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
 <dt id="_CPPv4N6semsim8Resource8ResourceERK3URI">
-<span id="_CPPv3N6semsim8Resource8ResourceERK3URI"></span><span id="_CPPv2N6semsim8Resource8ResourceERK3URI"></span><span id="semsim::Resource::Resource__URICR"></span><span class="target" id="classsemsim_1_1Resource_1ac775ceacdbeb03f56c7f52ea8a3392c2"></span><code class="sig-name descname">Resource</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="relation.html#_CPPv4N6semsim3URIE" title="semsim::URI">URI</a> &amp;<em>uri</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6semsim8Resource8ResourceERK3URI" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Construct from <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a>. <dl class="simple">
+<span id="_CPPv3N6semsim8Resource8ResourceERK3URI"></span><span id="_CPPv2N6semsim8Resource8ResourceERK3URI"></span><span id="semsim::Resource::Resource__URICR"></span><span class="target" id="classsemsim_1_1Resource_1ac775ceacdbeb03f56c7f52ea8a3392c2"></span><code class="sig-name descname">Resource</code><span class="sig-paren">(</span><em class="property">const</em> URI &amp;<em>uri</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6semsim8Resource8ResourceERK3URI" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct from URI. <dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">uri</span></code>: The <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a> of the resource </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uri</span></code>: The URI of the resource </p></li>
 </ul>
 </dd>
 </dl>
@@ -193,9 +195,9 @@
 <dl class="function">
 <dt id="_CPPv4N6semsim8Resource8ResourceEP9Component">
 <span id="_CPPv3N6semsim8Resource8ResourceEP9Component"></span><span id="_CPPv2N6semsim8Resource8ResourceEP9Component"></span><span id="semsim::Resource::Resource__ComponentP"></span><span class="target" id="classsemsim_1_1Resource_1a8fc99c3bb94f83bfb47daeeb504133ac"></span><code class="sig-name descname">Resource</code><span class="sig-paren">(</span><a class="reference internal" href="component.html#_CPPv4N6semsim9ComponentE" title="semsim::Component">Component</a> *<em>element</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6semsim8Resource8ResourceEP9Component" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Construct from <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a>. <dl class="simple">
+<dd><p>Construct from URI. <dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">uri</span></code>: The <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a> of the resource </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uri</span></code>: The URI of the resource </p></li>
 </ul>
 </dd>
 </dl>
@@ -205,9 +207,9 @@
 <dl class="function">
 <dt id="_CPPv4NK6semsim8Resource8toStringEv">
 <span id="_CPPv3NK6semsim8Resource8toStringEv"></span><span id="_CPPv2NK6semsim8Resource8toStringEv"></span><span id="semsim::Resource::toStringC"></span><span class="target" id="classsemsim_1_1Resource_1a16b0f8280c0077fa7e692aaae379c64d"></span>std::string <code class="sig-name descname">toString</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6semsim8Resource8toStringEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Construct directly from the UTF-8 string-encoded <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a>. <dl class="simple">
+<dd><p>Construct directly from the UTF-8 string-encoded URI. <dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">uri</span></code>: The UTF-8 string-encoded <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a> of the resource </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uri</span></code>: The UTF-8 string-encoded URI of the resource </p></li>
 </ul>
 </dd>
 </dl>
@@ -216,9 +218,9 @@
 
 <dl class="function">
 <dt id="_CPPv4NK6semsim8Resource6getURIERK3URI">
-<span id="_CPPv3NK6semsim8Resource6getURIERK3URI"></span><span id="_CPPv2NK6semsim8Resource6getURIERK3URI"></span><span id="semsim::Resource::getURI__URICRC"></span><span class="target" id="classsemsim_1_1Resource_1afa1cdeb63a62ea43794e0421b1ea7088"></span><a class="reference internal" href="relation.html#_CPPv4N6semsim3URIE" title="semsim::URI">URI</a> <code class="sig-name descname">getURI</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="relation.html#_CPPv4N6semsim3URIE" title="semsim::URI">URI</a> &amp;<em>base</em> = <a class="reference internal" href="relation.html#_CPPv4N6semsim3URIE" title="semsim::URI">URI</a>()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6semsim8Resource6getURIERK3URI" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Get a string representing the (possibly local) <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a> for this resource. <dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>The <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a> for this resource. </p>
+<span id="_CPPv3NK6semsim8Resource6getURIERK3URI"></span><span id="_CPPv2NK6semsim8Resource6getURIERK3URI"></span><span id="semsim::Resource::getURI__URICRC"></span><span class="target" id="classsemsim_1_1Resource_1afa1cdeb63a62ea43794e0421b1ea7088"></span>URI <code class="sig-name descname">getURI</code><span class="sig-paren">(</span><em class="property">const</em> URI &amp;<em>base</em> = URI()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6semsim8Resource6getURIERK3URI" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get a string representing the (possibly local) URI for this resource. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The URI for this resource. </p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">base</span></code>: If this resource points to a local <a class="reference internal" href="component.html#classsemsim_1_1Component"><span class="std std-ref">Component</span></a>, this parameter should be the relative path of the SBML document. Otherwise, the default value should be used. </p></li>
@@ -232,10 +234,16 @@
 <dt id="_CPPv4NK6semsim8Resource7isLocalEv">
 <span id="_CPPv3NK6semsim8Resource7isLocalEv"></span><span id="_CPPv2NK6semsim8Resource7isLocalEv"></span><span id="semsim::Resource::isLocalC"></span><span class="target" id="classsemsim_1_1Resource_1ad8dd3296b25226a28b83a1152945214f"></span>bool <code class="sig-name descname">isLocal</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6semsim8Resource7isLocalEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if this resource points to a local <a class="reference internal" href="component.html#classsemsim_1_1Component"><span class="std std-ref">Component</span></a> (as opposed to an external <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a>). </p>
+<dt><strong>Return</strong></dt><dd><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if this resource points to a local <a class="reference internal" href="component.html#classsemsim_1_1Component"><span class="std std-ref">Component</span></a> (as opposed to an external URI). </p>
 </dd>
 </dl>
 </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6semsim8Resource8humanizeEv">
+<span id="_CPPv3NK6semsim8Resource8humanizeEv"></span><span id="_CPPv2NK6semsim8Resource8humanizeEv"></span><span id="semsim::Resource::humanizeC"></span><span class="target" id="classsemsim_1_1Resource_1a8cb4ea29772bc3702351d53418724cae"></span>std::string <code class="sig-name descname">humanize</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6semsim8Resource8humanizeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return a humanreadable representation of the annotation information. <a class="reference internal" href="ontology.html#classsemsim_1_1Ontology"><span class="std std-ref">Ontology</span></a> terms will be replaced with human-readable names. </p>
 </dd></dl>
 
 </div>
@@ -254,7 +262,7 @@
         <a href="entity.html" class="btn btn-neutral float-right" title="Entity" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="biomodels_qualifiers.html" class="btn btn-neutral" title="Biomodels Qualifiers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="biomodels_qualifiers.html" class="btn btn-neutral float-left" title="Biomodels Qualifiers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -263,7 +271,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, J Kyle Medley, Prakhar Agarwal.
+        &copy; Copyright 2019, J Kyle Medley, Prakhar Agarwal
 
     </p>
   </div>
@@ -280,33 +288,16 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'0.1.0',
-            LANGUAGE:'None',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/language_data.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

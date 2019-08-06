@@ -17,34 +17,36 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Resource" href="resource.html" />
     <link rel="prev" title="Relation" href="relation.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -169,7 +171,7 @@
 <dl class="class">
 <dt id="_CPPv4N6semsim3bqbE">
 <span id="_CPPv3N6semsim3bqbE"></span><span id="_CPPv2N6semsim3bqbE"></span><span id="semsim::bqb"></span><span class="target" id="classsemsim_1_1bqb"></span><em class="property">class </em><code class="sig-name descname">bqb</code><a class="headerlink" href="#_CPPv4N6semsim3bqbE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>This class contains all members from the collection of <a class="reference external" href="http://co.mbine.org/standards/qualifiers">BioModels biolocial qualifers</a>. BioModels biology qualifiers are used as predicates in RDF to annotation singular and composite annotations. The most important relation is <code class="docutils literal notranslate"><span class="pre">bqb::is</span></code>, which is used to <em>define</em> elements in a model. When building annotations, you should always define elements with a single definition <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a> using SingularAnnotation::addDefinition or Entity::addDefinition on the <a class="reference internal" href="entity.html#classsemsim_1_1Entity"><span class="std std-ref">Entity</span></a> object contained in a <a class="reference internal" href="composite_annotation.html#classsemsim_1_1CompositeAnnotation"><span class="std std-ref">CompositeAnnotation</span></a> (which you can get using <a class="reference internal" href="composite_annotation.html#classsemsim_1_1CompositeAnnotation_1ad49acb1d0ffdce50dc738d2ad6e007f9"><span class="std std-ref">CompositeAnnotation::getEntity</span></a>). When you define elements using one of these functions, the definitions will automatically use the <code class="docutils literal notranslate"><span class="pre">bqb::is</span></code> qualifier.</p>
+<dd><p>This class contains all members from the collection of <a class="reference external" href="http://co.mbine.org/standards/qualifiers">BioModels biolocial qualifers</a>. BioModels biology qualifiers are used as predicates in RDF to annotation singular and composite annotations. The most important relation is <code class="docutils literal notranslate"><span class="pre">bqb::is</span></code>, which is used to <em>define</em> elements in a model. When building annotations, you should always define elements with a single definition URI using SingularAnnotation::addDefinition or Entity::addDefinition on the <a class="reference internal" href="entity.html#classsemsim_1_1Entity"><span class="std std-ref">Entity</span></a> object contained in a <a class="reference internal" href="composite_annotation.html#classsemsim_1_1CompositeAnnotation"><span class="std std-ref">CompositeAnnotation</span></a> (which you can get using <a class="reference internal" href="composite_annotation.html#classsemsim_1_1CompositeAnnotation_1ad49acb1d0ffdce50dc738d2ad6e007f9"><span class="std std-ref">CompositeAnnotation::getEntity</span></a>). When you define elements using one of these functions, the definitions will automatically use the <code class="docutils literal notranslate"><span class="pre">bqb::is</span></code> qualifier.</p>
 <p>Another important qualifier is <code class="docutils literal notranslate"><span class="pre">bqb::isPropertyOf</span></code>. This is automatically inserted by libSemSim when serializing the <a class="reference internal" href="physical_property.html#classsemsim_1_1PhysicalProperty"><span class="std std-ref">PhysicalProperty</span></a> of <a class="reference internal" href="composite_annotation.html#classsemsim_1_1CompositeAnnotation"><span class="std std-ref">CompositeAnnotations</span></a>.</p>
 <p>The members are:</p>
 <p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Relation</span> <span class="n">qual</span> <span class="o">=</span> <span class="n">bqb</span><span class="o">::</span><span class="n">encodes</span><span class="p">;</span>
@@ -203,7 +205,7 @@
         <a href="resource.html" class="btn btn-neutral float-right" title="Resource" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="relation.html" class="btn btn-neutral" title="Relation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="relation.html" class="btn btn-neutral float-left" title="Relation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -212,7 +214,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, J Kyle Medley, Prakhar Agarwal.
+        &copy; Copyright 2019, J Kyle Medley, Prakhar Agarwal
 
     </p>
   </div>
@@ -229,33 +231,16 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'0.1.0',
-            LANGUAGE:'None',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/language_data.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

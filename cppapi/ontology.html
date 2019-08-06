@@ -17,34 +17,36 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="CHEBI Ontology" href="chebi.html" />
     <link rel="prev" title="Ontologies" href="ontologies.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -183,13 +185,13 @@
 <dl class="function">
 <dt id="_CPPv4N6semsim8Ontology7resolveERKNSt6stringE12OntologyTermi">
 <span id="_CPPv3N6semsim8Ontology7resolveERKNSt6stringE12OntologyTermi"></span><span id="_CPPv2N6semsim8Ontology7resolveERKNSt6stringE12OntologyTermi"></span><span id="semsim::Ontology::resolve__ssCR.OntologyTerm.i"></span><span class="target" id="classsemsim_1_1Ontology_1a2de045f87ee769b4e33b87bb3ce03fdd"></span><em class="property">static</em> <a class="reference internal" href="resource.html#_CPPv4N6semsim8ResourceE" title="semsim::Resource">Resource</a> <code class="sig-name descname">resolve</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>root</em>, OntologyTerm <em>t</em>, int <em>n_digits</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6semsim8Ontology7resolveERKNSt6stringE12OntologyTermi" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Given a root <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a> (usually from identifiers.org), a numeric term, and the number of digits used in URIs, this function returns the correct <strong>full</strong> <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a> for the resource. <dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>The correct full <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a> for the resource in the ontology. </p>
+<dd><p>Given a root URI (usually from identifiers.org), a numeric term, and the number of digits used in URIs, this function returns the correct <strong>full</strong> URI for the resource. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The correct full URI for the resource in the ontology. </p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">root</span></code>: The root <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a> of the ontology (using identifiers.org if available). </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">root</span></code>: The root URI of the ontology (using identifiers.org if available). </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">t</span></code>: The numeric value of the ontology term. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">n_digits</span></code>: The number of digits in the <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a> format of the ontology term. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">n_digits</span></code>: The number of digits in the URI format of the ontology term. </p></li>
 </ul>
 </dd>
 </dl>
@@ -212,7 +214,7 @@
         <a href="chebi.html" class="btn btn-neutral float-right" title="CHEBI Ontology" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ontologies.html" class="btn btn-neutral" title="Ontologies" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ontologies.html" class="btn btn-neutral float-left" title="Ontologies" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -221,7 +223,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, J Kyle Medley, Prakhar Agarwal.
+        &copy; Copyright 2019, J Kyle Medley, Prakhar Agarwal
 
     </p>
   </div>
@@ -238,33 +240,16 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'0.1.0',
-            LANGUAGE:'None',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/language_data.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

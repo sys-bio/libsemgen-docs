@@ -17,34 +17,36 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="SingularAnnotation" href="singular_annotation.html" />
     <link rel="prev" title="PhysicalProperty" href="physical_property.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -264,7 +266,7 @@ Expanding the <a class="reference internal" href="entity.html#entity"><span clas
 
 <dl class="function">
 <dt id="_CPPv4N6semsim19CompositeAnnotation7addTermERK8RelationRK8Resource">
-<span id="_CPPv3N6semsim19CompositeAnnotation7addTermERK8RelationRK8Resource"></span><span id="_CPPv2N6semsim19CompositeAnnotation7addTermERK8RelationRK8Resource"></span><span id="semsim::CompositeAnnotation::addTerm__RelationCR.ResourceCR"></span><span class="target" id="classsemsim_1_1CompositeAnnotation_1a58187ca790f61e83042442b04b0fc066"></span>void <code class="sig-name descname">addTerm</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="uri.html#_CPPv4N6semsim8RelationE" title="semsim::Relation">Relation</a> &amp;<em>relation</em>, <em class="property">const</em> <a class="reference internal" href="resource.html#_CPPv4N6semsim8ResourceE" title="semsim::Resource">Resource</a> &amp;<em>resource</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6semsim19CompositeAnnotation7addTermERK8RelationRK8Resource" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N6semsim19CompositeAnnotation7addTermERK8RelationRK8Resource"></span><span id="_CPPv2N6semsim19CompositeAnnotation7addTermERK8RelationRK8Resource"></span><span id="semsim::CompositeAnnotation::addTerm__RelationCR.ResourceCR"></span><span class="target" id="classsemsim_1_1CompositeAnnotation_1a58187ca790f61e83042442b04b0fc066"></span>void <code class="sig-name descname">addTerm</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="relation.html#_CPPv4N6semsim8RelationE" title="semsim::Relation">Relation</a> &amp;<em>relation</em>, <em class="property">const</em> <a class="reference internal" href="resource.html#_CPPv4N6semsim8ResourceE" title="semsim::Resource">Resource</a> &amp;<em>resource</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6semsim19CompositeAnnotation7addTermERK8RelationRK8Resource" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Shortcut for adding a descriptor term to the last entity descriptor (often, there is just one entity descriptor). Create a new <a class="reference internal" href="entity_descriptor.html#classsemsim_1_1EntityDescriptor"><span class="std std-ref">EntityDescriptor</span></a> if none exist. <dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">relation</span></code>: The relation that the new term should use. </p></li>
@@ -288,7 +290,7 @@ Expanding the <a class="reference internal" href="entity.html#entity"><span clas
 
 <dl class="function">
 <dt id="_CPPv4NK6semsim19CompositeAnnotation14serializeToRDFERK3URIP12raptor_worldP17raptor_serializer">
-<span id="_CPPv3NK6semsim19CompositeAnnotation14serializeToRDFERK3URIP12raptor_worldP17raptor_serializer"></span><span id="_CPPv2NK6semsim19CompositeAnnotation14serializeToRDFERK3URIP12raptor_worldP17raptor_serializer"></span><span id="semsim::CompositeAnnotation::serializeToRDF__URICR.raptor_worldP.raptor_serializerPC"></span><span class="target" id="classsemsim_1_1CompositeAnnotation_1a3853904ce49eed425ef4835d25c40c9b"></span><em class="property">virtual</em> void <code class="sig-name descname">serializeToRDF</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="relation.html#_CPPv4N6semsim3URIE" title="semsim::URI">URI</a> &amp;<em>sbml_base_uri</em>, raptor_world *<em>world</em>, raptor_serializer *<em>serializer</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6semsim19CompositeAnnotation14serializeToRDFERK3URIP12raptor_worldP17raptor_serializer" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3NK6semsim19CompositeAnnotation14serializeToRDFERK3URIP12raptor_worldP17raptor_serializer"></span><span id="_CPPv2NK6semsim19CompositeAnnotation14serializeToRDFERK3URIP12raptor_worldP17raptor_serializer"></span><span id="semsim::CompositeAnnotation::serializeToRDF__URICR.raptor_worldP.raptor_serializerPC"></span><span class="target" id="classsemsim_1_1CompositeAnnotation_1a3853904ce49eed425ef4835d25c40c9b"></span><em class="property">virtual</em> void <code class="sig-name descname">serializeToRDF</code><span class="sig-paren">(</span><em class="property">const</em> URI &amp;<em>sbml_base_uri</em>, raptor_world *<em>world</em>, raptor_serializer *<em>serializer</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6semsim19CompositeAnnotation14serializeToRDFERK3URIP12raptor_worldP17raptor_serializer" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Serialize this annotation to RDF using the Raptor library. The RDF serialization format is chosen when initializing the <code class="docutils literal notranslate"><span class="pre">raptor_serializer</span></code>, and must be done before calling this function. <dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">world</span></code>: Raptor world object. Must be initialized prior to calling this function. </p></li>
@@ -303,7 +305,7 @@ Expanding the <a class="reference internal" href="entity.html#entity"><span clas
 <dt id="_CPPv4NK6semsim19CompositeAnnotation9getMetaIdEv">
 <span id="_CPPv3NK6semsim19CompositeAnnotation9getMetaIdEv"></span><span id="_CPPv2NK6semsim19CompositeAnnotation9getMetaIdEv"></span><span id="semsim::CompositeAnnotation::getMetaIdC"></span><span class="target" id="classsemsim_1_1CompositeAnnotation_1a50d02ffa54980a2e61ebf659c1366ba8"></span><em class="property">const</em> std::string &amp;<code class="sig-name descname">getMetaId</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6semsim19CompositeAnnotation9getMetaIdEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>the <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a> for this element (usually a local identifier). </p>
+<dt><strong>Return</strong></dt><dd><p>the URI for this element (usually a local identifier). </p>
 </dd>
 </dl>
 </p>
@@ -331,6 +333,12 @@ Expanding the <a class="reference internal" href="entity.html#entity"><span clas
 </p>
 </dd></dl>
 
+<dl class="function">
+<dt id="_CPPv4NK6semsim19CompositeAnnotation8humanizeEv">
+<span id="_CPPv3NK6semsim19CompositeAnnotation8humanizeEv"></span><span id="_CPPv2NK6semsim19CompositeAnnotation8humanizeEv"></span><span id="semsim::CompositeAnnotation::humanizeC"></span><span class="target" id="classsemsim_1_1CompositeAnnotation_1aa23635293081f144aeb835ce6d20cd64"></span>std::string <code class="sig-name descname">humanize</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6semsim19CompositeAnnotation8humanizeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return a humanreadable representation of the annotation information. <a class="reference internal" href="ontology.html#classsemsim_1_1Ontology"><span class="std std-ref">Ontology</span></a> terms will be replaced with human-readable names. </p>
+</dd></dl>
+
 </div>
 </dd></dl>
 
@@ -347,7 +355,7 @@ Expanding the <a class="reference internal" href="entity.html#entity"><span clas
         <a href="singular_annotation.html" class="btn btn-neutral float-right" title="SingularAnnotation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="physical_property.html" class="btn btn-neutral" title="PhysicalProperty" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="physical_property.html" class="btn btn-neutral float-left" title="PhysicalProperty" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -356,7 +364,7 @@ Expanding the <a class="reference internal" href="entity.html#entity"><span clas
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, J Kyle Medley, Prakhar Agarwal.
+        &copy; Copyright 2019, J Kyle Medley, Prakhar Agarwal
 
     </p>
   </div>
@@ -373,33 +381,16 @@ Expanding the <a class="reference internal" href="entity.html#entity"><span clas
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'0.1.0',
-            LANGUAGE:'None',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/language_data.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

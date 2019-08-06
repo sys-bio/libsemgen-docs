@@ -17,34 +17,36 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Ontologies" href="ontologies.html" />
     <link rel="prev" title="Component" href="component.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -214,14 +216,40 @@
 
 <dl class="function">
 <dt id="_CPPv4NK6semsim5Model6getRDFERK3URIRKNSt6stringE">
-<span id="_CPPv3NK6semsim5Model6getRDFERK3URIRKNSt6stringE"></span><span id="_CPPv2NK6semsim5Model6getRDFERK3URIRKNSt6stringE"></span><span id="semsim::Model::getRDF__URICR.ssCRC"></span><span class="target" id="classsemsim_1_1Model_1ae617daa49bceed15b7b63ade0c05b474"></span><em class="property">virtual</em> std::string <code class="sig-name descname">getRDF</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="relation.html#_CPPv4N6semsim3URIE" title="semsim::URI">URI</a> &amp;<em>sbml_base_uri</em>, <em class="property">const</em> std::string &amp;<em>format</em> = &quot;rdfxml&quot;<span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv4NK6semsim5Model6getRDFERK3URIRKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Get the RDF serialization of this model. The serialized RDF will always need to refer back to the original SBML or CellML model using a <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a>. Usually, the RDF will be written to a COMBINE archive along with the model, in which case the <code class="docutils literal notranslate"><span class="pre">sbml_base_uri</span></code> argument should be the relative path to the model file in the COMBINE archive. <dl class="simple">
+<span id="_CPPv3NK6semsim5Model6getRDFERK3URIRKNSt6stringE"></span><span id="_CPPv2NK6semsim5Model6getRDFERK3URIRKNSt6stringE"></span><span id="semsim::Model::getRDF__URICR.ssCRC"></span><span class="target" id="classsemsim_1_1Model_1ae617daa49bceed15b7b63ade0c05b474"></span><em class="property">virtual</em> std::string <code class="sig-name descname">getRDF</code><span class="sig-paren">(</span><em class="property">const</em> URI &amp;<em>sbml_base_uri</em>, <em class="property">const</em> std::string &amp;<em>format</em> = &quot;rdfxml&quot;<span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv4NK6semsim5Model6getRDFERK3URIRKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the RDF serialization of this model. The serialized RDF will always need to refer back to the original SBML or CellML model using a URI. Usually, the RDF will be written to a COMBINE archive along with the model, in which case the <code class="docutils literal notranslate"><span class="pre">sbml_base_uri</span></code> argument should be the relative path to the model file in the COMBINE archive. <dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>A string representation of the RDF for model using the desired RDF serialization format. </p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">format</span></code>: The RDF serialization format. Choices include “rdfxml”, “ntriples”, “turtle”, “trig”, “rss-tag-soup”, “grddl”, “rdfa”, “json”, and “nquads”. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sbml_base_uri</span></code>: A <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a> that points to the original model file. Usually a relative path in a COMBINE archive. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sbml_base_uri</span></code>: A URI that points to the original model file. Usually a relative path in a COMBINE archive. </p></li>
 </ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6semsim5Model8humanizeEv">
+<span id="_CPPv3NK6semsim5Model8humanizeEv"></span><span id="_CPPv2NK6semsim5Model8humanizeEv"></span><span id="semsim::Model::humanizeC"></span><span class="target" id="classsemsim_1_1Model_1a3548224c17d99541f84b67475fbd9d1e"></span>std::string <code class="sig-name descname">humanize</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6semsim5Model8humanizeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return a humanreadable representation of the annotation information. <a class="reference internal" href="ontology.html#classsemsim_1_1Ontology"><span class="std std-ref">Ontology</span></a> terms will be replaced with human-readable names. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6semsim5Model9encodeXMLEv">
+<span id="_CPPv3NK6semsim5Model9encodeXMLEv"></span><span id="_CPPv2NK6semsim5Model9encodeXMLEv"></span><span id="semsim::Model::encodeXMLC"></span><span class="target" id="classsemsim_1_1Model_1a6b33be07c3cc10f685c2d7df743f30b2"></span><em class="property">virtual</em> std::string <code class="sig-name descname">encodeXML</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv4NK6semsim5Model9encodeXMLEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return the XML encoding of the attached SBML or CellML model. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The XML content. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6semsim5Model9getFormatEv">
+<span id="_CPPv3NK6semsim5Model9getFormatEv"></span><span id="_CPPv2NK6semsim5Model9getFormatEv"></span><span id="semsim::Model::getFormatC"></span><span class="target" id="classsemsim_1_1Model_1aba797916377dbc9f28d7846ab789a786"></span><em class="property">virtual</em> std::string <code class="sig-name descname">getFormat</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv4NK6semsim5Model9getFormatEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>”sbml” if an SBML model, “cellml” if a cellml model. </p>
 </dd>
 </dl>
 </p>
@@ -243,7 +271,7 @@
         <a href="ontologies.html" class="btn btn-neutral float-right" title="Ontologies" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="component.html" class="btn btn-neutral" title="Component" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="component.html" class="btn btn-neutral float-left" title="Component" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -252,7 +280,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, J Kyle Medley, Prakhar Agarwal.
+        &copy; Copyright 2019, J Kyle Medley, Prakhar Agarwal
 
     </p>
   </div>
@@ -269,33 +297,16 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'0.1.0',
-            LANGUAGE:'None',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/language_data.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

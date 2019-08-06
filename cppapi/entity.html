@@ -17,34 +17,36 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="EntityDescriptor" href="entity_descriptor.html" />
     <link rel="prev" title="Resource" href="resource.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -170,7 +172,7 @@
 <dt id="_CPPv4N6semsim6EntityE">
 <span id="_CPPv3N6semsim6EntityE"></span><span id="_CPPv2N6semsim6EntityE"></span><span id="semsim::Entity"></span><span class="target" id="classsemsim_1_1Entity"></span><em class="property">class </em><code class="sig-name descname">Entity</code> : <em class="property">public</em> semsim::EntityBase<a class="headerlink" href="#_CPPv4N6semsim6EntityE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>An <a class="reference internal" href="#classsemsim_1_1Entity"><span class="std std-ref">Entity</span></a> is one of the two parts of a composite annotation. The entity describes “what” a model element is and “where” it is located in the physical world through a linear chain of descriptor terms contained in the <a class="reference internal" href="entity_descriptor.html#classsemsim_1_1EntityDescriptor"><span class="std std-ref">EntityDescriptor</span></a> element.</p>
-<p>An <a class="reference internal" href="#classsemsim_1_1Entity"><span class="std std-ref">Entity</span></a> contains one or more <em>definition terms</em> (i.e. ontology resource URIs) that define what the entity is. A valid definition term could be <a class="reference external" href="https://identifiers.org/CHEBI:17234">CHEBI:17234</a>, which represents glucose (in the case of a chemical reaction network model) or <a class="reference external" href="http://identifiers.org/fma/FMA:9670">FMA:9670</a>, which represents blood (in the case of a physiological model). SemSim allows multiple definition URIs, but it is general best practice to annotate a model element with a single definition <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a> that best captures the model element, i.e. a single ChEBI entity (for molecules) or a single FMA entity (for physiological variables).</p>
+<p>An <a class="reference internal" href="#classsemsim_1_1Entity"><span class="std std-ref">Entity</span></a> contains one or more <em>definition terms</em> (i.e. ontology resource URIs) that define what the entity is. A valid definition term could be <a class="reference external" href="https://identifiers.org/CHEBI:17234">CHEBI:17234</a>, which represents glucose (in the case of a chemical reaction network model) or <a class="reference external" href="http://identifiers.org/fma/FMA:9670">FMA:9670</a>, which represents blood (in the case of a physiological model). SemSim allows multiple definition URIs, but it is general best practice to annotate a model element with a single definition URI that best captures the model element, i.e. a single ChEBI entity (for molecules) or a single FMA entity (for physiological variables).</p>
 <p>An <a class="reference internal" href="#classsemsim_1_1Entity"><span class="std std-ref">Entity</span></a> also has <a class="reference internal" href="entity_descriptor.html#classsemsim_1_1EntityDescriptor"><span class="std std-ref">EntityDescriptors</span></a>, which serve to refine the entity by describing “where” it is in the physical world. Currently, an <a class="reference internal" href="#classsemsim_1_1Entity"><span class="std std-ref">Entity</span></a> can have zero or one <a class="reference internal" href="entity_descriptor.html#classsemsim_1_1EntityDescriptor"><span class="std std-ref">EntityDescriptor</span></a> elements. In the future, this may be extended to allow multiple <a class="reference internal" href="entity_descriptor.html#classsemsim_1_1EntityDescriptor"><span class="std std-ref">EntityDescriptor</span></a> elements. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Types</p>
@@ -192,7 +194,7 @@
 <dl class="function">
 <dt id="_CPPv4N6semsim6Entity6EntityERKNSt6stringERK8Resource">
 <span id="_CPPv3N6semsim6Entity6EntityERKNSt6stringERK8Resource"></span><span id="_CPPv2N6semsim6Entity6EntityERKNSt6stringERK8Resource"></span><span id="semsim::Entity::Entity__ssCR.ResourceCR"></span><span class="target" id="classsemsim_1_1Entity_1a3fa4f370a9bb63ca10dc84296bb91304"></span><code class="sig-name descname">Entity</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>metaid</em>, <em class="property">const</em> <a class="reference internal" href="resource.html#_CPPv4N6semsim8ResourceE" title="semsim::Resource">Resource</a> &amp;<em>definition</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6semsim6Entity6EntityERKNSt6stringERK8Resource" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Construct from a definition <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a>. </p>
+<dd><p>Construct from a definition URI. </p>
 </dd></dl>
 
 <dl class="function">
@@ -275,18 +277,24 @@
 
 <dl class="function">
 <dt id="_CPPv4NK6semsim6Entity14serializeToRDFERK3URIP12raptor_worldP17raptor_serializer">
-<span id="_CPPv3NK6semsim6Entity14serializeToRDFERK3URIP12raptor_worldP17raptor_serializer"></span><span id="_CPPv2NK6semsim6Entity14serializeToRDFERK3URIP12raptor_worldP17raptor_serializer"></span><span id="semsim::Entity::serializeToRDF__URICR.raptor_worldP.raptor_serializerPC"></span><span class="target" id="classsemsim_1_1Entity_1aca6be21cfc4180984ed1ee5ff52a60ac"></span>void <code class="sig-name descname">serializeToRDF</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="relation.html#_CPPv4N6semsim3URIE" title="semsim::URI">URI</a> &amp;<em>sbml_base_uri</em>, raptor_world *<em>world</em>, raptor_serializer *<em>serializer</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6semsim6Entity14serializeToRDFERK3URIP12raptor_worldP17raptor_serializer" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3NK6semsim6Entity14serializeToRDFERK3URIP12raptor_worldP17raptor_serializer"></span><span id="_CPPv2NK6semsim6Entity14serializeToRDFERK3URIP12raptor_worldP17raptor_serializer"></span><span id="semsim::Entity::serializeToRDF__URICR.raptor_worldP.raptor_serializerPC"></span><span class="target" id="classsemsim_1_1Entity_1aca6be21cfc4180984ed1ee5ff52a60ac"></span>void <code class="sig-name descname">serializeToRDF</code><span class="sig-paren">(</span><em class="property">const</em> URI &amp;<em>sbml_base_uri</em>, raptor_world *<em>world</em>, raptor_serializer *<em>serializer</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6semsim6Entity14serializeToRDFERK3URIP12raptor_worldP17raptor_serializer" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Serialize this entity to RDF using the Raptor library. The RDF serialization format is chosen when initializing the <code class="docutils literal notranslate"><span class="pre">raptor_serializer</span></code>, and must be done before calling this function. <dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>the <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a> for this entity. </p>
+<dt><strong>Return</strong></dt><dd><p>the URI for this entity. </p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">base_uri</span></code>: The base <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a> of this object (usually the metaid of the component this is attached to). </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">base_uri</span></code>: The base URI of this object (usually the metaid of the component this is attached to). </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">world</span></code>: Raptor world object. Must be initialized prior to calling this function. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">serializer</span></code>: Raptor serializer object. Must be initialized prior to calling this function. </p></li>
 </ul>
 </dd>
 </dl>
 </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK6semsim6Entity8humanizeEv">
+<span id="_CPPv3NK6semsim6Entity8humanizeEv"></span><span id="_CPPv2NK6semsim6Entity8humanizeEv"></span><span id="semsim::Entity::humanizeC"></span><span class="target" id="classsemsim_1_1Entity_1a827299d182958cd97fbc5d57145bd51f"></span><em class="property">virtual</em> std::string <code class="sig-name descname">humanize</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6semsim6Entity8humanizeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return a humanreadable representation of the annotation information. <a class="reference internal" href="ontology.html#classsemsim_1_1Ontology"><span class="std std-ref">Ontology</span></a> terms will be replaced with human-readable names. </p>
 </dd></dl>
 
 </div>
@@ -305,7 +313,7 @@
         <a href="entity_descriptor.html" class="btn btn-neutral float-right" title="EntityDescriptor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="resource.html" class="btn btn-neutral" title="Resource" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="resource.html" class="btn btn-neutral float-left" title="Resource" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -314,7 +322,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, J Kyle Medley, Prakhar Agarwal.
+        &copy; Copyright 2019, J Kyle Medley, Prakhar Agarwal
 
     </p>
   </div>
@@ -331,33 +339,16 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'0.1.0',
-            LANGUAGE:'None',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/language_data.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

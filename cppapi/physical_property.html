@@ -17,34 +17,36 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="CompositeAnnotation" href="composite_annotation.html" />
     <link rel="prev" title="DescriptorTerm" href="descriptor_term.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -181,7 +183,7 @@
 <dl class="function">
 <dt id="_CPPv4N6semsim16PhysicalProperty16PhysicalPropertyERKNSt6stringE">
 <span id="_CPPv3N6semsim16PhysicalProperty16PhysicalPropertyERKNSt6stringE"></span><span id="_CPPv2N6semsim16PhysicalProperty16PhysicalPropertyERKNSt6stringE"></span><span id="semsim::PhysicalProperty::PhysicalProperty__ssCR"></span><span class="target" id="classsemsim_1_1PhysicalProperty_1a0ee71cba996098f3db5284451ad16879"></span><code class="sig-name descname">PhysicalProperty</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>resource</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6semsim16PhysicalProperty16PhysicalPropertyERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Construct directly from a string that contains the resource <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a>. </p>
+<dd><p>Construct directly from a string that contains the resource URI. </p>
 </dd></dl>
 
 <dl class="function">
@@ -204,6 +206,12 @@
 </p>
 </dd></dl>
 
+<dl class="function">
+<dt id="_CPPv4NK6semsim16PhysicalProperty8humanizeEv">
+<span id="_CPPv3NK6semsim16PhysicalProperty8humanizeEv"></span><span id="_CPPv2NK6semsim16PhysicalProperty8humanizeEv"></span><span id="semsim::PhysicalProperty::humanizeC"></span><span class="target" id="classsemsim_1_1PhysicalProperty_1ad691f13fc74162f8ba17b0df48af8c70"></span>std::string <code class="sig-name descname">humanize</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6semsim16PhysicalProperty8humanizeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return a humanreadable representation of the annotation information. <a class="reference internal" href="ontology.html#classsemsim_1_1Ontology"><span class="std std-ref">Ontology</span></a> terms will be replaced with human-readable names. </p>
+</dd></dl>
+
 </div>
 </dd></dl>
 
@@ -220,7 +228,7 @@
         <a href="composite_annotation.html" class="btn btn-neutral float-right" title="CompositeAnnotation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="descriptor_term.html" class="btn btn-neutral" title="DescriptorTerm" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="descriptor_term.html" class="btn btn-neutral float-left" title="DescriptorTerm" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -229,7 +237,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, J Kyle Medley, Prakhar Agarwal.
+        &copy; Copyright 2019, J Kyle Medley, Prakhar Agarwal
 
     </p>
   </div>
@@ -246,33 +254,16 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'0.1.0',
-            LANGUAGE:'None',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/language_data.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

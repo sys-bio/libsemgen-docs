@@ -17,34 +17,36 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="SBML Import / Export" href="sbml.html" />
     <link rel="prev" title="CHEBI Ontology" href="chebi.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -182,12 +184,12 @@
 <dl class="function">
 <dt id="_CPPv4N6semsim3OPB3getE12OntologyTerm">
 <span id="_CPPv3N6semsim3OPB3getE12OntologyTerm"></span><span id="_CPPv2N6semsim3OPB3getE12OntologyTerm"></span><span id="semsim::OPB::get__OntologyTerm"></span><span class="target" id="classsemsim_1_1OPB_1acae41e87890ff92c4db44cb707da58b8"></span><em class="property">static</em> <a class="reference internal" href="resource.html#_CPPv4N6semsim8ResourceE" title="semsim::Resource">Resource</a> <code class="sig-name descname">get</code><span class="sig-paren">(</span>OntologyTerm <em>t</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6semsim3OPB3getE12OntologyTerm" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Get the full <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a> of an ontology term given its numeric value. <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// returns &quot;https://identifiers.org/opb/OPB_00154&quot; (fluid volume)</span>
+<dd><p>Get the full URI of an ontology term given its numeric value. <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// returns &quot;https://identifiers.org/opb/OPB_00154&quot; (fluid volume)</span>
 <span class="n">Resource</span> <span class="n">r</span> <span class="o">=</span> <span class="n">OPB</span><span class="o">::</span><span class="n">get</span><span class="p">(</span><span class="mi">154</span><span class="p">);</span>
 </pre></div>
 </div>
  <dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>The correct full <a class="reference internal" href="relation.html#classsemsim_1_1URI"><span class="std std-ref">URI</span></a> for the resource in <a class="reference internal" href="#classsemsim_1_1OPB"><span class="std std-ref">OPB</span></a>.</p>
+<dt><strong>Return</strong></dt><dd><p>The correct full URI for the resource in <a class="reference internal" href="#classsemsim_1_1OPB"><span class="std std-ref">OPB</span></a>.</p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">t</span></code>: The numeric value of the ontology term. </p></li>
@@ -213,7 +215,7 @@
         <a href="sbml.html" class="btn btn-neutral float-right" title="SBML Import / Export" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="chebi.html" class="btn btn-neutral" title="CHEBI Ontology" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="chebi.html" class="btn btn-neutral float-left" title="CHEBI Ontology" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -222,7 +224,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, J Kyle Medley, Prakhar Agarwal.
+        &copy; Copyright 2019, J Kyle Medley, Prakhar Agarwal
 
     </p>
   </div>
@@ -239,33 +241,16 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'0.1.0',
-            LANGUAGE:'None',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/language_data.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

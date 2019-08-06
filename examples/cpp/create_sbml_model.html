@@ -17,34 +17,36 @@
   
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Python" href="../python/index.html" />
     <link rel="prev" title="C++" href="index.html" /> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -289,7 +291,16 @@
 125
 126
 127
-128</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="hll"><span class="cp"># include &lt;semsim/SemSim.h&gt;</span>
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="hll"><span class="cp"># include &lt;semsim/SemSim.h&gt;</span>
 </span>
 <span class="cp"># include &quot;sbml/SBMLTypes.h&quot;</span>
 
@@ -388,7 +399,7 @@
   <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;RDF serialization of annotations:</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
   <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;**********************************************************</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">;</span>
 
-<span class="hll">  <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="n">model</span><span class="p">.</span><span class="n">getRDF</span><span class="p">(</span><span class="s">&quot;./mymodel&quot;</span><span class="p">,</span> <span class="s">&quot;turtle&quot;</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="hll">  <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="n">model</span><span class="p">.</span><span class="n">getRDF</span><span class="p">(</span><span class="s">&quot;./mymodel.xml&quot;</span><span class="p">,</span> <span class="s">&quot;turtle&quot;</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
 </span>
   <span class="c1">// this isn&#39;t bad - the RDF already contains a composite annotation</span>
   <span class="c1">// telling is that the species &quot;glucose&quot; is inside the &quot;cytosol&quot;</span>
@@ -400,21 +411,30 @@
   <span class="c1">// the compartment currently has a *singular annotation*, which can&#39;t</span>
   <span class="c1">// represent membership in a &quot;pancreatic beta cell&quot;, so we change this to</span>
   <span class="c1">// a composite annotation</span>
-  <span class="n">Component</span><span class="o">*</span> <span class="n">c</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="n">getComponentForId</span><span class="p">(</span><span class="s">&quot;cytosol&quot;</span><span class="p">);</span>
-  <span class="n">c</span><span class="o">-&gt;</span><span class="n">setAnnotation</span><span class="p">(</span><span class="n">c</span><span class="o">-&gt;</span><span class="n">getAnnotation</span><span class="p">().</span><span class="n">makeComposite</span><span class="p">(</span><span class="n">OPB</span><span class="o">::</span><span class="n">get</span><span class="p">(</span><span class="mi">523</span><span class="p">)));</span> <span class="c1">// 523 is spatial volume</span>
-  <span class="c1">// now add a descriptor term specifying that the cytoplasm</span>
+<span class="hll">  <span class="n">Component</span><span class="o">*</span> <span class="n">c</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="n">getComponentForId</span><span class="p">(</span><span class="s">&quot;cytosol&quot;</span><span class="p">);</span>
+</span><span class="hll">  <span class="n">c</span><span class="o">-&gt;</span><span class="n">setAnnotation</span><span class="p">(</span><span class="n">c</span><span class="o">-&gt;</span><span class="n">getAnnotation</span><span class="p">().</span><span class="n">makeComposite</span><span class="p">(</span><span class="n">OPB</span><span class="o">::</span><span class="n">get</span><span class="p">(</span><span class="mi">523</span><span class="p">)));</span> <span class="c1">// 523 is spatial volume</span>
+</span>  <span class="c1">// now add a descriptor term specifying that the cytoplasm</span>
   <span class="c1">// is part of a pancreatic beta cell (CL:0000169)</span>
-  <span class="n">c</span><span class="o">-&gt;</span><span class="n">getCompositeAnnotation</span><span class="p">().</span><span class="n">addTerm</span><span class="p">(</span>
-    <span class="n">bqb</span><span class="o">::</span><span class="n">isPartOf</span><span class="p">,</span> <span class="c1">// the relation (the cytoplasm *is part of* ...)</span>
-    <span class="n">CL</span><span class="o">::</span><span class="n">get</span><span class="p">(</span><span class="mi">169</span><span class="p">)</span>   <span class="c1">// the resource (pancreatic beta cell)</span>
-  <span class="p">);</span>
-
+<span class="hll">  <span class="n">c</span><span class="o">-&gt;</span><span class="n">getCompositeAnnotation</span><span class="p">().</span><span class="n">addTerm</span><span class="p">(</span>
+</span><span class="hll">    <span class="n">bqb</span><span class="o">::</span><span class="n">isPartOf</span><span class="p">,</span> <span class="c1">// the relation (the cytoplasm *is part of* ...)</span>
+</span><span class="hll">    <span class="n">CL</span><span class="o">::</span><span class="n">get</span><span class="p">(</span><span class="mi">169</span><span class="p">)</span>   <span class="c1">// the resource (pancreatic beta cell)</span>
+</span><span class="hll">  <span class="p">);</span>
+</span>
   <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;**********************************************************</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
   <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;RDF serialization with cell type annotation:</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
   <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;**********************************************************</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">;</span>
 
-  <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="n">model</span><span class="p">.</span><span class="n">getRDF</span><span class="p">(</span><span class="s">&quot;./mymodel&quot;</span><span class="p">,</span> <span class="s">&quot;turtle&quot;</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="hll">  <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="n">model</span><span class="p">.</span><span class="n">getRDF</span><span class="p">(</span><span class="s">&quot;./mymodel.xml&quot;</span><span class="p">,</span> <span class="s">&quot;turtle&quot;</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;**********************************************************</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Humanized version of the annotation information</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;(ontology terms replaced by human-readable names):</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;**********************************************************</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">;</span>
 
+<span class="hll">  <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="n">model</span><span class="p">.</span><span class="n">humanize</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+</span>
+<span class="hll">  <span class="n">exportToOmex</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="s">&quot;/tmp/combine.omex&quot;</span><span class="p">);</span>
+</span>
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
@@ -528,6 +548,14 @@ RDF serialization with cell type annotation:
 &lt;./mymodel#glucose&gt;
     bqb:is &lt;http://identifiers.org/opb/OPB_00425&gt; ;
     bqb:isPropertyOf &lt;#glucose_entity&gt; .
+
+**********************************************************
+Humanized version of the annotation information
+(ontology terms replaced by human-readable names):
+**********************************************************
+
+OPB:spatial volume -&gt; (isPropertyOf) -&gt; #cytosol -&gt; (is) -&gt; GO:cytoplasm -&gt; (isPartOf) -&gt; CL:type B pancreatic cell
+OPB:chemical concentration -&gt; (isPropertyOf) -&gt; #glucose -&gt; (is) -&gt; CHEBI:glucose -&gt; (occursIn) -&gt; #cytosol
 </pre></div>
 </div>
 </div>
@@ -544,7 +572,7 @@ RDF serialization with cell type annotation:
         <a href="../python/index.html" class="btn btn-neutral float-right" title="Python" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="C++" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="C++" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -553,7 +581,7 @@ RDF serialization with cell type annotation:
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, J Kyle Medley, Prakhar Agarwal.
+        &copy; Copyright 2019, J Kyle Medley, Prakhar Agarwal
 
     </p>
   </div>
@@ -570,33 +598,16 @@ RDF serialization with cell type annotation:
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../../',
-            VERSION:'0.1.0',
-            LANGUAGE:'None',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../../_static/jquery.js"></script>
-      <script type="text/javascript" src="../../_static/underscore.js"></script>
-      <script type="text/javascript" src="../../_static/doctools.js"></script>
-      <script type="text/javascript" src="../../_static/language_data.js"></script>
-
-  
-
-  <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>
